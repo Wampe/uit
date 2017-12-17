@@ -1,11 +1,12 @@
 /* eslint-disable */
-var gulp = require('gulp'),
-		path = require('path'),
-		ngc = require('@angular/compiler-cli/src/main').main,
-		rollup = require('gulp-rollup'),
-		rename = require('gulp-rename'),
-		del = require('del'),
-		runSequence = require('run-sequence'),
+var gulp 						= require('gulp'),
+		path 						= require('path'),
+		ngc 						= require('@angular/compiler-cli/src/main').main,
+		rollup 					= require('gulp-rollup'),
+		rename 					= require('gulp-rename'),
+		sass 						= require('gulp-sass'),
+		del 						= require('del'),
+		runSequence			= require('run-sequence'),
 		inlineResources = require('./tools/gulp/inline-resources');
 
 const rootFolder = path.join(__dirname);
@@ -163,20 +164,32 @@ gulp.task('copy:readme', function () {
 		.pipe(gulp.dest(distFolder));
 });
 
+/**
+ * 10. Generates pre-built themes
+ */
+gulp.task('sass:themes', function () {
+	return gulp.src(`${srcFolder}/core/theming/prebuilt/*.scss`)
+		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(gulp.dest(`${distFolder}/core/themes`));
+});
+
+/**
+ * 11. Copy dist to node_modules
+ */
 gulp.task('copy:dist', function() {
 	return gulp.src([`${distFolder}/**/*`])
 		.pipe(gulp.dest(modulesFolder));
 });
 
 /**
- * 10. Delete /.tmp folder
+ * 12. Delete /.tmp folder
  */
 gulp.task('clean:tmp', function () {
 	return deleteFolders([tmpFolder]);
 });
 
 /**
- * 11. Delete /build folder
+ * 13. Delete /build folder
  */
 gulp.task('clean:build', function () {
 	return deleteFolders([buildFolder]);
@@ -193,6 +206,7 @@ gulp.task('compile', function () {
 		'copy:build',
 		'copy:manifest',
 		'copy:readme',
+		'sass:themes',
 		'copy:dist',
 		'clean:build',
 		'clean:tmp',

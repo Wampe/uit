@@ -1,0 +1,6 @@
+@import 'palette';
+@import 'site';
+
+@mixin uit-theme() {
+	@include uit-site();
+}
