@@ -4,10 +4,8 @@ The User Interface Toolkit is a library with components and other resources for 
 
 # Installation
 
-To install the User Interface Toolkit, run:
-```
-npm install --save git+https://git@github.com/Wampe/uit.git
-```
+Currently a installation of the library is just possible by a local build. 
+Check the instroduction in the root´s README.
 
 # Consuming the library
 Add it for example to your Angular `AppModule`:
