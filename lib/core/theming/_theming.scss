@@ -1,6 +1,7 @@
 @import 'palette';
+@import 'typography';
 @import 'site';
 
-@mixin uit-theme() {
+@mixin uit-theme($typography: uit-typography-config()) {
 	@include uit-site();
 }
