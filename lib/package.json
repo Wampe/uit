@@ -1,0 +1,32 @@
+{
+  "name": "@wampe/uit",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wampe/uit.git"
+  },
+  "author": {
+    "name": "Wampe",
+    "email": "info@wampe.net"
+  },
+  "keywords": [
+		"angular",
+		"user interface",
+		"ui",
+		"components",
+		"toolkit"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wampe/uit/issues"
+  },
+  "main": "wampe-uit.umd.js",
+  "module": "wampe-uit.js",
+  "jsnext:main": "wampe-uit.js",
+  "typings": "wampe-uit.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^5.0.0",
+		"rxjs": "^5.5.2",
+    "zone.js": "^0.8.14"
+  }
+}

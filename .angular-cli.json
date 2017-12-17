@@ -1,0 +1,102 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "toolkitapp"
+  },
+  "apps": [
+    {
+      "name": "playground",
+      "root": "playground",
+      "outDir": "./dist/playground",
+      "assets": [
+        { "glob": "**/*", "input": "./assets/", "output": "./assets/" },
+        { "glob": "favicon.ico", "input": "./", "output": "./" }
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.scss"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
+      "name": "demo",
+      "root": "demo-app",
+      "outDir": "./dist/demo-app",
+      "assets": [
+        { "glob": "**/*", "input": "./assets/", "output": "./assets/" },
+        { "glob": "favicon.ico", "input": "./", "output": "./" }
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.scss"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "playground/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "playground/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+		},
+		{
+      "project": "demo-app/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "demo-app/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+		},
+		{
+      "project": "lib/tsconfig.es5.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "lib/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "scss",
+    "component": {}
+  }
+}
