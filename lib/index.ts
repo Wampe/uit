@@ -3,9 +3,13 @@ import { NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA } from '@angular/
 import { UitButtonModule } from './button/button.module';
 export * from './button/button.module';
 
+import { UitToggleButtonModule } from './toggle-button/toggle-button.module';
+export * from './toggle-button/toggle-button.module';
+
 @NgModule({
 	exports: [
-		UitButtonModule
+		UitButtonModule,
+		UitToggleButtonModule
 	],
 	schemas: [
 		CUSTOM_ELEMENTS_SCHEMA

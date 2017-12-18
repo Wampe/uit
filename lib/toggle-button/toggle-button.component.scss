@@ -1,6 +1,6 @@
-@mixin uit-button($typography) {
+@mixin uit-toggle-button($typography) {
 
-	.uit-button {
+	.uit-toggle-button {
 		@include uit-typography($typography, button);
 		
 		cursor: default;
@@ -17,7 +17,7 @@
 			color: map-get($uit-theme-foreground, interaction-hover-foreground);
 		}
 
-		&:active {
+		&.active {
 			transition: $default-transition;
 			background-color: map-get($uit-theme-background, interaction-pressed-background);
 			color: map-get($uit-theme-foreground, interaction-pressed-foreground);

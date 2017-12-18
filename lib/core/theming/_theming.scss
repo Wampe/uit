@@ -6,8 +6,10 @@ $default-element-thickness: 8px;
 @import 'site';
 
 @import '../../button/button.component';
+@import '../../toggle-button/toggle-button.component';
 
 @mixin uit-theme($typography: uit-typography-config()) {
 	@include uit-site($typography);
 	@include uit-button($typography);
+	@include uit-toggle-button($typography);
 }
