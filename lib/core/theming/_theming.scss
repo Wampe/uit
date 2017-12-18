@@ -2,6 +2,9 @@
 @import 'typography';
 @import 'site';
 
+@import '../../button/button.component';
+
 @mixin uit-theme($typography: uit-typography-config()) {
 	@include uit-site();
+	@include uit-button();
 }

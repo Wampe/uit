@@ -1,0 +1,25 @@
+@mixin uit-button() {
+	.uit-button {
+		background-color: #222;
+		color: white;
+		padding: 8px;
+		cursor: default;
+
+		&:hover {
+			background-color: red;
+		}
+
+		&:active {
+			background-color: green;
+		}	
+
+		&:focus {
+			border: 1px solid yellow;
+		}
+
+		&[disabled] {
+			opacity: 0.25;
+			pointer-events: none;
+		}
+	}
+}
