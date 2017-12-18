@@ -1,25 +1,34 @@
-@mixin uit-button() {
+@mixin uit-button($typography) {
 	.uit-button {
-		background-color: #222;
-		color: white;
-		padding: 8px;
+		@include uit-typography($typography, button);
 		cursor: default;
-
+		user-select: none;
+		margin: $default-element-thickness;
+		padding: $default-element-thickness;
+		transition: $default-transition;
+		background-color: map-get($uit-theme-background, interaction-background);
+		color: map-get($uit-theme-foreground, interaction-foreground);
+		
 		&:hover {
-			background-color: red;
+			transition: $default-transition;
+			background-color: map-get($uit-theme-background, interaction-hover-background);
+			color: map-get($uit-theme-foreground, interaction-hover-foreground);
 		}
 
 		&:active {
-			background-color: green;
+			transition: $default-transition;
+			background-color: map-get($uit-theme-background, interaction-pressed-background);
+			color: map-get($uit-theme-foreground, interaction-pressed-foreground);
 		}	
 
 		&:focus {
-			border: 1px solid yellow;
+			border: 2px solid map-get($uit-theme-background, focus);
 		}
 
 		&[disabled] {
-			opacity: 0.25;
 			pointer-events: none;
+			background-color: map-get($uit-theme-background, interaction-disabled-background);
+			color: map-get($uit-theme-foreground, interaction-disabled-foreground);
 		}
 	}
 }

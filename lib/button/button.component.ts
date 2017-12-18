@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UitButtonBase } from '../core/components/button-base';
 /**
- * ToDo: comment
+ * Represents a Angular button component, which reacts to the click event.
  */
 @Component({
 	selector: 'uit-button',

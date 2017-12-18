@@ -1,7 +1,16 @@
 $uit-theme-background: (
-  background: black
+	background: black,
+	focus: orange,
+	interaction-background: #444,
+	interaction-hover-background: #666,
+	interaction-pressed-background: #222,
+	interaction-disabled-background: gray,
 );
 
 $uit-theme-foreground: (
-  text: white
+	text: white,
+	interaction-foreground: white,
+	interaction-hover-foreground: white,
+	interaction-pressed-foreground: white,
+	interaction-disabled-foreground: darkgray
 );

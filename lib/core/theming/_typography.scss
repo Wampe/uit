@@ -14,13 +14,15 @@
 @function uit-typography-config(
   $font-family:   'Open Sans',
   $headline:      uit-typography-level(24px, 32px, 400),
-  $body:        	uit-typography-level(14px, 20px, 400),
+	$body:        	uit-typography-level(14px, 20px, 400),
+	$button:       	uit-typography-level(12px, 20px, 700),
   $label:       	uit-typography-level(12px, 20px, 400),
   $input:         uit-typography-level(16px, 1.125, 400)
 ) {
 	$config: (
 		headline:			$headline,
-    body:       	$body,
+		body:       	$body,
+		button: 			$button,
     label:      	$label,
     input:      	$input
 	);
@@ -31,7 +33,7 @@
 	@return map-get(map-get($config, $level), $key);
 }
 
-@mixin ui-typography($config, $level) {
+@mixin uit-typography($config, $level) {
 	$font-family: map-get($config, font-family);
 	$font-size: uit-typography-get($config, $level, font-size);
 	$font-weight: uit-typography-get($config, $level, font-weight);
