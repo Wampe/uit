@@ -1,0 +1,24 @@
+@mixin uit-shell() {
+	.uit-shell {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		height: 100%;
+		align-items: stretch;
+
+		.shell-body {
+			display: flex;
+			flex: 1;
+
+			.nav {
+				flex: 0 0 220px;
+				background-color: map-get($uit-theme-background, side-bar-background);
+				color: map-get($uit-theme-foreground, text);
+			}
+	
+			.content {
+				flex: 1;
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+@mixin uit-site-header() {
+
+	.uit-site-header {
+		display: flex;
+		align-items: center;
+		padding: $default-element-thickness;
+		background-color: map-get($uit-theme-background, header-background);
+		color: map-get($uit-theme-foreground, text);
+	}
+}

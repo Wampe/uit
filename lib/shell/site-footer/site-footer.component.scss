@@ -1,0 +1,10 @@
+@mixin uit-site-footer() {
+	
+	.uit-site-footer {
+		display: flex;
+		align-items: center;
+		padding: $default-element-thickness;
+		background-color: map-get($uit-theme-background, footer-background);
+		color: map-get($uit-theme-foreground, text);
+	}
+}
