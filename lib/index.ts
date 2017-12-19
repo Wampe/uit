@@ -3,15 +3,21 @@ import { NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA } from '@angular/
 import { UitShellModule } from './shell/shell.module';
 export * from './shell/shell.module';
 
+import { UitNavigationModule } from './navigation/navigation.module';
+export * from './navigation/navigation.module';
+
 import { UitButtonModule } from './button/button.module';
 export * from './button/button.module';
 
 import { UitToggleButtonModule } from './toggle-button/toggle-button.module';
 export * from './toggle-button/toggle-button.module';
 
+export * from './core/interfaces/interfaces';
+
 @NgModule({
 	exports: [
 		UitShellModule,
+		UitNavigationModule,
 		UitButtonModule,
 		UitToggleButtonModule
 	],

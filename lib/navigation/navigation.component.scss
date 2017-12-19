@@ -1,0 +1,11 @@
+@mixin uit-navigation() {
+
+	.uit-navigation {
+		display: flex;
+		flex-direction: column;
+
+		flex: 0 0 220px;
+		background-color: map-get($uit-theme-background, side-bar-background);
+		color: map-get($uit-theme-foreground, text);
+	}
+}

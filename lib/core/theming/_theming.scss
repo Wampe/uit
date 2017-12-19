@@ -9,6 +9,8 @@ $default-element-thickness: 8px;
 @import '../../shell/shell.component';
 @import '../../shell/site-header/site-header.component';
 @import '../../shell/site-footer/site-footer.component';
+@import '../../navigation/navigation.component';
+@import '../../navigation/navigation-item.component';
 @import '../../button/button.component';
 @import '../../toggle-button/toggle-button.component';
 
@@ -18,6 +20,8 @@ $default-element-thickness: 8px;
 	@include uit-shell();
 	@include uit-site-header();
 	@include uit-site-footer();
+	@include uit-navigation();
+	@include uit-navigation-item($typography);
 	@include uit-button($typography);
 	@include uit-toggle-button($typography);
 }

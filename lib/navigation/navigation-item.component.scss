@@ -1,0 +1,41 @@
+@mixin uit-navigation-item($typography) {
+
+	.uit-navigation-item {
+		@include uit-typography($typography, button);
+		
+		display: flex;
+		flex-direction: column;
+		
+		.link {
+			cursor: default;
+			user-select: none;
+			text-decoration: unset;
+			padding: $default-element-thickness;
+			transition: $default-transition;
+			background-color: map-get($uit-theme-background, navigation-background);
+			color: map-get($uit-theme-foreground, navigation-foreground);
+			
+			&:hover {
+				transition: $default-transition;
+				background-color: map-get($uit-theme-background, navigation-hover-background);
+				color: map-get($uit-theme-foreground, navigation-hover-foreground);
+			}
+
+			&:active {
+				transition: $default-transition;
+				background-color: map-get($uit-theme-background, navigation-pressed-background);
+				color: map-get($uit-theme-foreground, navigation-pressed-foreground);
+			}	
+
+			&:focus {
+				border: 2px solid map-get($uit-theme-background, focus);
+			}
+
+			&[disabled] {
+				pointer-events: none;
+				background-color: map-get($uit-theme-background, navigation-disabled-background);
+				color: map-get($uit-theme-foreground, navigation-disabled-foreground);
+			}
+		}
+	}
+}

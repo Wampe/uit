@@ -6,6 +6,11 @@ $uit-theme-background: (
 	footer-background: #222,
 	side-bar-background: #666,
 
+	navigation-background: #aaa,
+	navigation-hover-background: #ccc,
+	navigation-pressed-background: #888,
+	navigation-disabledbackground: gray,
+
 	interaction-background: #444,
 	interaction-hover-background: #666,
 	interaction-pressed-background: #222,
@@ -16,6 +21,11 @@ $uit-theme-foreground: (
 	text: white,
 	accent-text: #333,
 	
+	navigation-foreground: #222,
+	navigation-hover-foreground: #222,
+	navigation-pressed-foreground: #222,
+	navigation-disabled-foreground: darkgray,
+
 	interaction-foreground: white,
 	interaction-hover-foreground: white,
 	interaction-pressed-foreground: white,
