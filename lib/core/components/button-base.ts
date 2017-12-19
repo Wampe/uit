@@ -24,7 +24,7 @@ export class UitButtonBase extends UitElement {
 	/**
 	 * Gets a value that indicates whether a UitButtonBase element is currently activated.
 	 */
-	protected isPressed: boolean;
+	public isPressed: boolean;
 	/**
 	 * Creates a new instance of UitButtonBase class.
 	 */
@@ -37,7 +37,7 @@ export class UitButtonBase extends UitElement {
 	 * Invoked when an mousedown event is raised on this element.
 	 */
 	@HostListener('mousedown', ['$event'])
-	protected onMouseDown(event: MouseEvent) {
+	private onMouseDown(event: MouseEvent) {
 		if (event.button === 0) {
 			this.isPressed = true;
 		}
@@ -49,7 +49,7 @@ export class UitButtonBase extends UitElement {
 	 * Invoked when an mouseup event is raised on this element.
 	 */
 	@HostListener('mouseup', ['$event'])
-	protected onMouseUp(event: MouseEvent) {
+	private onMouseUp(event: MouseEvent) {
 		if (event.button === 0) {
 			this.isPressed = false;
 		}

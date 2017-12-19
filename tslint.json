@@ -37,18 +37,10 @@
       true,
       {
         "order": [
-          "public-static-field",
-					"public-static-method",
-					"protected-static-field",
-					"protected-static-method",
-					"private-static-field",
-					"private-static-method",
-					"public-instance-field",
-					"protected-instance-field",
-					"private-instance-field",
-					"public-constructor",
-					"protected-constructor",
-					"private-constructor",
+					"static-field",
+					"static-method",
+					"instance-field",
+					"constructor",
 					"public-instance-method",
 					"protected-instance-method",
 					"private-instance-method"
@@ -150,7 +142,7 @@
     "no-output-rename": true,
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
+    "component-class-suffix": false,
     "directive-class-suffix": true
   }
 }

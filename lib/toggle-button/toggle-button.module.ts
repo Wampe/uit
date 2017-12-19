@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 
-import { UitToggleButtonComponent } from './toggle-button.component';
+import { UitToggleButton } from './toggle-button.component';
 export * from './toggle-button.component';
 
 @NgModule({
 	declarations: [
-		UitToggleButtonComponent
+		UitToggleButton
 	],
 	exports: [
-		UitToggleButtonComponent
+		UitToggleButton
 	]
 })
 export class UitToggleButtonModule { }

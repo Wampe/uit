@@ -1,0 +1,42 @@
+@mixin uit-element() {
+
+	.horizontal-align-left {
+		align-self: flex-start;
+		align-items: flex-start;	
+	}
+
+	.horizontal-align-right {
+		align-self: flex-end;
+		align-items: flex-end;	
+	}
+
+	.horizontal-align-center {
+		align-self: center;
+		align-items: center;	
+	}
+
+	.horizontal-align-stretch {
+		align-self: stretch;
+		align-items: stretch;	
+	}
+
+	.vertical-align-top {
+		align-self: flex-start;
+		align-items: flex-start;	
+	}
+
+	.vertical-align-bottom {
+		align-self: flex-end;
+		align-items: flex-end;	
+	}
+
+	.vertical-align-center {
+		align-self: center;
+		align-items: center;	
+	}
+
+	.vertical-align-stretch {
+		align-self: stretch;
+		align-items: stretch;	
+	}
+}

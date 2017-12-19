@@ -13,7 +13,7 @@ import { UitButtonBase } from '../core/components/button-base';
 	selector: 'uit-toggle-button',
 	templateUrl: './toggle-button.component.html',
 })
-export class UitToggleButtonComponent extends UitButtonBase {
+export class UitToggleButton extends UitButtonBase {
 	/**
 	 * Gets or sets a value that indicates whether a UitToggleButton element is currently checked.
 	 * Provides also the checked state specific style class.

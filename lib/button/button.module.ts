@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { UitButtonComponent } from './button.component';
+import { UitButton } from './button.component';
 export * from './button.component';
 
 @NgModule({
@@ -9,10 +9,10 @@ export * from './button.component';
 		CommonModule
 	],
 	declarations: [
-		UitButtonComponent
+		UitButton
 	],
 	exports: [
-		UitButtonComponent
+		UitButton
 	]
 })
 export class UitButtonModule { }

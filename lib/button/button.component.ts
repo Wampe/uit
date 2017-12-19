@@ -7,7 +7,7 @@ import { UitButtonBase } from '../core/components/button-base';
 	selector: 'uit-button',
 	templateUrl: './button.component.html'
 })
-export class UitButtonComponent extends UitButtonBase {
+export class UitButton extends UitButtonBase {
 	/**
 	 *Creates a new instance of UitBUttonComponent class.
 	 */
