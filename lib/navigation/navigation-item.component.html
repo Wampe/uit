@@ -1,4 +1,11 @@
+<ng-template #defaultTemplate>
+	{{ label }}
+</ng-template>
+
 <a 	class="link"
+		[class.active]="isSelected"
 		[routerLink]="[path]">
-	<ng-content></ng-content>
+	<ng-container *ngIf="!label else defaultTemplate">
+		<ng-content></ng-content>
+	</ng-container>
 </a> 

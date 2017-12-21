@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { UitItemsBase } from '../core/components/items-base';
+import { UitNavigationItem } from './navigation-item.component';
+import { UitButtonBase } from '../core/components/button-base';
 /**
  * Represents a Angular items component, which provides a iteration of UitNavigationItem elements.
  */

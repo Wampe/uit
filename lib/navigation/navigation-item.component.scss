@@ -21,7 +21,7 @@
 				color: map-get($uit-theme-foreground, navigation-hover-foreground);
 			}
 
-			&:active {
+			&.active {
 				transition: $default-transition;
 				background-color: map-get($uit-theme-background, navigation-pressed-background);
 				color: map-get($uit-theme-foreground, navigation-pressed-foreground);

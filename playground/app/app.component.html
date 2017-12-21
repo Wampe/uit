@@ -1,6 +1,11 @@
 <uit-shell>
 	<uit-site-header>User Interface Toolkit - Playground</uit-site-header> 
 	<uit-navigation>
+		<uit-navigation-item *ngFor="let item of navigation"
+													[label]="item.label"
+													[path]="item.path">
+		</uit-navigation-item>
+		<!-- <uit-navigation-item>Item</uit-navigation-item>
 		<uit-navigation-item>Item</uit-navigation-item>
 		<uit-navigation-item>Item</uit-navigation-item>
 		<uit-navigation-item>Item</uit-navigation-item>
@@ -10,8 +15,8 @@
 		<uit-navigation-item>Item</uit-navigation-item>
 		<uit-navigation-item>Item</uit-navigation-item>
 		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-	</uit-navigation>
+		<uit-navigation-item>Item</uit-navigation-item> -->
+	</uit-navigation> 
+	<router-outlet></router-outlet>
 	<uit-site-footer>Version: 0.0.0</uit-site-footer>  
 </uit-shell>
