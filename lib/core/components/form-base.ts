@@ -16,12 +16,7 @@ export class UitFormBase extends UitElement implements ControlValueAccessor {
 	 * Gets or sets a value that determines the timing of binding source updates.
 	 */
 	@Input()
-	public updateSourceTrigger: UpdateSourceTrigger;
-	/**
-	 * Gets or sets a value that indicates the type of the input element.
-	 */
-	@Input()
-	public type: string;
+	public updateSource: UpdateSourceTrigger;
 	/**
 	 * Gets or sets a value indicating whether the contents of the input component can be changed.
 	 */
@@ -41,7 +36,7 @@ export class UitFormBase extends UitElement implements ControlValueAccessor {
 	set value(value: any) {
 		if (!this.disabled && this.innerValue !== value) {
 			this.innerValue = value;
-			if (this.updateSourceTrigger === UpdateSourceTrigger.propertyChanged) {
+			if (this.changed && this.updateSource === UpdateSourceTrigger.propertyChanged) {
 				this.changed(value);
 			}
 		}
@@ -59,7 +54,7 @@ export class UitFormBase extends UitElement implements ControlValueAccessor {
 	 */
 	constructor() {
 		super();
-		this.updateSourceTrigger = UpdateSourceTrigger.propertyChanged;
+		this.updateSource = UpdateSourceTrigger.propertyChanged;
 	}
 	/**
 	 * Writes a new value to the element.
@@ -97,7 +92,7 @@ export class UitFormBase extends UitElement implements ControlValueAccessor {
 	 * Occurs when the input element within focus.
 	 */
 	public blur(event: FocusEvent): void {
-		if (this.updateSourceTrigger === UpdateSourceTrigger.lostFocus) {
+		if (this.changed && this.updateSource === UpdateSourceTrigger.lostFocus) {
 			this.changed(this.innerValue);
 		}
 	}

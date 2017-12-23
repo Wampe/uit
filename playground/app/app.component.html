@@ -8,9 +8,11 @@
 	</uit-navigation> 
 	<router-outlet></router-outlet>
 	<form #form="ngForm">
-		<uit-textbox name="testbox" label="Text 1" type="text" [(ngModel)]="textValue" #textinput></uit-textbox>
+		<uit-textbox name="testbox" label="Text 1" step="1.75" type="number" [(ngModel)]="textValue" #textinput></uit-textbox>
+		<uit-textbox name="testboxmail" [(ngModel)]="email" type="email" label="email"></uit-textbox>
+		<uit-textbox name="testboxpassword" type="password" updateSource="propertyChanged" [(ngModel)]="password" label="pw"></uit-textbox>
 		<uit-textbox name="testbox4" label="Text 2" type="text" disabled [(ngModel)]="textValue2" #textinput></uit-textbox>
-		<uit-textbox name="testbox2" label="Text 3" type="text" [required]="true" updateSourceTrigger="lostFocus" [(ngModel)]="textValue3" #textinputfocus></uit-textbox>
+		<uit-textbox name="testbox2" isMultiline="true" type="number" label="Text 3" type="text" [required]="true" [(ngModel)]="textValue3" #textinputfocus></uit-textbox>
 	</form>
 
 	<pre>{{ form.value | json }}</pre>

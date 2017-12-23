@@ -8,11 +8,12 @@ import { INavigation } from '@wampe/uit';
 export class AppComponent {
 	public title = 'app';
 
-	public textValue = 'ProeprtyChanged';
+	public textValue: string | number = '123';
 	public textValue2 = 'Disabled';
 	public textValue3 = 'Lost Focus';
 	public numberValue: number;
-
+	public email: string;
+	public password: string;
 	public navigation: INavigation[] = [
 		{
 			label: 'Home',

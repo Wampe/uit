@@ -1,56 +1,94 @@
 @mixin uit-textbox($typography) {
+
 	.uit-textbox {
+		@include uit-typography($typography, label);
+
 		display: flex;
-		// flex-direction: column;
+		flex-direction: column;
 		margin: $default-element-thickness;
-		// border: 1px solid black;
 
-		.input {
-			outline: none;
-			border: none;
+		.multiline {
+			min-height: 120px;
+		}
 
-			&:hover {
-				transition: $default-transition;
-				// background-color: map-get($uit-theme-background, interaction-hover-background);
-				// color: map-get($uit-theme-foreground, interaction-hover-foreground);
+		.input-wrapper
+		{
+			display: flex;
+			flex: 1;
+			
+			.uit-button {
+				margin: 0px 4px !important;
 			}
-	
-			&:active {
-				transition: $default-transition;
-				// background-color: map-get($uit-theme-background, interaction-pressed-background);
-				// color: map-get($uit-theme-foreground, interaction-pressed-foreground);
-			}	
-	
-			&:focus {
-				border: 2px solid map-get($uit-theme-background, focus);
-			}
-	
-			&[disabled] {
-				pointer-events: none;
-				border-color: 2px solid blue;
-				// background-color: map-get($uit-theme-background, interaction-disabled-background);
-				// color: map-get($uit-theme-foreground, interaction-disabled-foreground);
-			}
-	
-			&:valid {
-				border: 2px solid green;
-			}
-	
-			&:invalid {
-				border: 2px solid red;
-			}
-	
-			&:read-only {
-				border: 0px solid gray;
-			}
-	
-			&:required {
-				border: 2px solid yellow;
+
+			.input {
+				@include uit-typography($typography, input);
+				flex: 1;
+				padding: $default-element-thickness / 2;
+				background: transparent;
+				flex: 1;
+				outline: none;
+				border: none;
+
+				background-color: white;
+
+				&:hover {
+					transition: $default-transition;
+					// background-color: map-get($uit-theme-background, interaction-hover-background);
+					// color: map-get($uit-theme-foreground, interaction-hover-foreground);
+				}
+		
+				&:active {
+					transition: $default-transition;
+					// background-color: map-get($uit-theme-background, interaction-pressed-background);
+					// color: map-get($uit-theme-foreground, interaction-pressed-foreground);
+				}	
+		
+				// &:focus {
+				// 	border: 2px solid map-get($uit-theme-background, focus);
+				// }
+		
+				// &:disabled {
+				// 	pointer-events: none;
+				// 	border-color: 2px solid blue !important;
+				// 	// background-color: map-get($uit-theme-background, interaction-disabled-background);
+				// 	// color: map-get($uit-theme-foreground, interaction-disabled-foreground);
+				// }
+
+				&[disabled] {
+					pointer-events: none;
+					border-color: 2px solid blue !important;
+					// background-color: map-get($uit-theme-background, interaction-disabled-background);
+					// color: map-get($uit-theme-foreground, interaction-disabled-foreground);
+				}
+		
+				// &:valid {
+				// 	border: 2px solid green;
+				// }
+		
+				// &:invalid {
+				// 	border: 2px solid red;
+				// }
+		
+				&:read-only {
+					border: 1px solid gray;
+				}
+		
+				// &:required {
+				// 	border: 2px solid yellow;
+				// }
 			}
 		}
 
 		.label {
 			min-width: 120px;
+		}
+
+		input[type=number]::-webkit-inner-spin-button, 
+		input[type=number]::-webkit-outer-spin-button{ 
+			-webkit-appearance: none; 
+		}
+		input[type=number] {
+			-moz-appearance: textfield;
 		}
 	}
 }

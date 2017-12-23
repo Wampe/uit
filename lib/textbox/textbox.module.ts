@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { UitButtonModule } from '../button/button.module';
 
 import { UitTextbox } from './textbox.component';
 export * from './textbox.component';
@@ -8,7 +9,8 @@ export * from './textbox.component';
 @NgModule({
 	imports: [
 		CommonModule,
-		FormsModule
+		FormsModule,
+		UitButtonModule
 	],
 	declarations: [
 		UitTextbox

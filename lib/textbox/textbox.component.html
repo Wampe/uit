@@ -2,10 +2,29 @@
 	<label >{{ label }}</label>
 	<span *ngIf="required === true">*</span>
 </div>
-<input 	class="input"
-				[type]="type"
-				[readonly]="readonly"
-				[required]="required"
-				[disabled]="disabled"
-				[(ngModel)]="value"
-				(blur)="blur($event)">
+<div class="input-wrapper">
+	<ng-container *ngIf="!isMultiline">
+		<input 	class="input"
+						[type]="type"
+						[min]="min"
+						[max]="max"
+						[step]="step" 
+						[readonly]="readonly"
+						[required]="required"
+						[disabled]="disabled"
+						[(ngModel)]="value"
+						(blur)="blur($event)">
+		<ng-container *ngIf="type === 'number'">
+			<uit-button (clicked)="increaseValue()">Up</uit-button>
+			<uit-button (clicked)="decreaseValue()">Down</uit-button>
+		</ng-container>
+	</ng-container>
+	<ng-container *ngIf="isMultiline">
+			<textarea class="input multiline"
+								[readonly]="readonly"
+								[required]="required"
+								[disabled]="disabled"
+								[(ngModel)]="value"
+								(blur)="blur($event)"></textarea>
+		</ng-container>
+</div>
