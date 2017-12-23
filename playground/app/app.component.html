@@ -5,18 +5,24 @@
 													[label]="item.label"
 													[path]="item.path">
 		</uit-navigation-item>
-		<!-- <uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item>
-		<uit-navigation-item>Item</uit-navigation-item> -->
 	</uit-navigation> 
 	<router-outlet></router-outlet>
+	<form #form="ngForm">
+		<uit-textbox name="testbox" label="Text 1" type="text" [(ngModel)]="textValue" #textinput></uit-textbox>
+		<uit-textbox name="testbox4" label="Text 2" type="text" disabled [(ngModel)]="textValue2" #textinput></uit-textbox>
+		<uit-textbox name="testbox2" label="Text 3" type="text" [required]="true" updateSourceTrigger="lostFocus" [(ngModel)]="textValue3" #textinputfocus></uit-textbox>
+	</form>
+
+	<pre>{{ form.value | json }}</pre>
+
+	ProeprtyChanged 
+	<br>
+	NgMOdel: {{ textValue }}
+	<br><br>
+	Disabled <br>
+	NgMOdel: {{ textValue2 }}
+	<br><br>
+	LostFocus <br>
+	NgModel: {{ textValue3 }}
 	<uit-site-footer>Version: 0.0.0</uit-site-footer>  
 </uit-shell>

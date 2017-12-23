@@ -48,6 +48,11 @@ export class UitElement {
 	@Input()
 	public verticalAlignment: VerticalAlignment;
 	/**
+	 * Gets or sets a value indicating whether this element is disabled in the user interface.
+	 */
+	@Input()
+	public disabled: boolean;
+	/**
 	 * Gets a value indicating whether the mouse pointer is located over this element.
 	 */
 	public isMouseOver: boolean;

@@ -12,6 +12,9 @@ export * from './button/button.module';
 import { UitToggleButtonModule } from './toggle-button/toggle-button.module';
 export * from './toggle-button/toggle-button.module';
 
+import { UitTextboxModule } from './textbox/textbox.module';
+export * from './textbox/textbox.module';
+
 export * from './core/interfaces/interfaces';
 
 @NgModule({
@@ -19,7 +22,8 @@ export * from './core/interfaces/interfaces';
 		UitShellModule,
 		UitNavigationModule,
 		UitButtonModule,
-		UitToggleButtonModule
+		UitToggleButtonModule,
+		UitTextboxModule
 	],
 	schemas: [
 		CUSTOM_ELEMENTS_SCHEMA

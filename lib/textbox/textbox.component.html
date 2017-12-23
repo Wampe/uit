@@ -1,0 +1,11 @@
+<div class="label">
+	<label >{{ label }}</label>
+	<span *ngIf="required === true">*</span>
+</div>
+<input 	class="input"
+				[type]="type"
+				[readonly]="readonly"
+				[required]="required"
+				[disabled]="disabled"
+				[(ngModel)]="value"
+				(blur)="blur($event)">

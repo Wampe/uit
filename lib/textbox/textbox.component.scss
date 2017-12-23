@@ -1,0 +1,56 @@
+@mixin uit-textbox($typography) {
+	.uit-textbox {
+		display: flex;
+		// flex-direction: column;
+		margin: $default-element-thickness;
+		// border: 1px solid black;
+
+		.input {
+			outline: none;
+			border: none;
+
+			&:hover {
+				transition: $default-transition;
+				// background-color: map-get($uit-theme-background, interaction-hover-background);
+				// color: map-get($uit-theme-foreground, interaction-hover-foreground);
+			}
+	
+			&:active {
+				transition: $default-transition;
+				// background-color: map-get($uit-theme-background, interaction-pressed-background);
+				// color: map-get($uit-theme-foreground, interaction-pressed-foreground);
+			}	
+	
+			&:focus {
+				border: 2px solid map-get($uit-theme-background, focus);
+			}
+	
+			&[disabled] {
+				pointer-events: none;
+				border-color: 2px solid blue;
+				// background-color: map-get($uit-theme-background, interaction-disabled-background);
+				// color: map-get($uit-theme-foreground, interaction-disabled-foreground);
+			}
+	
+			&:valid {
+				border: 2px solid green;
+			}
+	
+			&:invalid {
+				border: 2px solid red;
+			}
+	
+			&:read-only {
+				border: 0px solid gray;
+			}
+	
+			&:required {
+				border: 2px solid yellow;
+			}
+		}
+
+		.label {
+			min-width: 120px;
+		}
+	}
+}
