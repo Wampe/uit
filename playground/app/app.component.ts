@@ -7,7 +7,7 @@ import { INavigation } from '@wampe/uit';
 })
 export class AppComponent {
 	public title = 'app';
-
+	public requiredText: string;
 	public textValue: string | number = '123';
 	public textValue2 = 'Disabled';
 	public textValue3 = 'Lost Focus';

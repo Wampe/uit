@@ -8,6 +8,7 @@
 	</uit-navigation> 
 	<router-outlet></router-outlet>
 	<form #form="ngForm">
+		<uit-textbox name="testboxRequired" [required]="true" label="Required Textbox" [(ngModel)]="requiredText"></uit-textbox>
 		<uit-textbox name="testbox" label="Text 1" step="1.75" type="number" [(ngModel)]="textValue" #textinput></uit-textbox>
 		<uit-textbox name="testboxmail" [(ngModel)]="email" type="email" label="email"></uit-textbox>
 		<uit-textbox name="testboxpassword" type="password" updateSource="propertyChanged" [(ngModel)]="password" label="pw"></uit-textbox>

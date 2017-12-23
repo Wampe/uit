@@ -13,7 +13,12 @@
 						[required]="required"
 						[disabled]="disabled"
 						[(ngModel)]="value"
-						(blur)="blur($event)">
+						(blur)="blur($event)"
+						#name="ngModel">
+						<!-- https://angular.io/guide/form-validation -->
+		<div *ngIf="name.invalid && (name.dirty || name.touched)">
+  		Name is required
+		</div>
 		<ng-container *ngIf="type === 'number'">
 			<uit-button (clicked)="increaseValue()">Up</uit-button>
 			<uit-button (clicked)="decreaseValue()">Down</uit-button>

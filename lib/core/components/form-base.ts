@@ -44,7 +44,11 @@ export class UitFormBase extends UitElement implements ControlValueAccessor {
 	/**
 	 * Updates the current value of the input component in data model.
 	 */
-	public changed: (_: any) => {};
+	private changed: (_: any) => void;
+	/**
+	 * Indicates the current input component is touched.
+	 */
+	private touched: () => void;
 	/**
 	 * Property for internal handling of the input component value.
 	 */
@@ -79,7 +83,9 @@ export class UitFormBase extends UitElement implements ControlValueAccessor {
 	 * This is called by the forms API on initialization so it can update the form model on blur.
 	 * @param fn - Callback function that should be called when the control receives a blur event.
 	 */
-	public registerOnTouched(fn: any): void { }
+	public registerOnTouched(fn: any): void {
+		this.touched = fn;
+	}
 	/**
 	 * This function is called by the forms API when the control status changes to or from "DISABLED".
 	 * Depending on the value, it should enable or disable the appropriate DOM element.
