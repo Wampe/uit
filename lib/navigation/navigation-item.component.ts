@@ -5,7 +5,7 @@ import {
 	Input
 } from '@angular/core';
 import { UitItemBase } from '../core/components/item-base';
-import { INavigation } from '../core/Interfaces/navigation.interface';
+import { INavigation } from '../core/interfaces/navigation.interface';
 /**
 	* Represents a Angular component, which is a child element of a UitNavigation component.
  */

@@ -20,8 +20,8 @@
   		Name is required
 		</div>
 		<ng-container *ngIf="type === 'number'">
-			<uit-button (clicked)="increaseValue()">Up</uit-button>
-			<uit-button (clicked)="decreaseValue()">Down</uit-button>
+			<uit-button (clicked)="increaseNumericValue()">Up</uit-button>
+			<uit-button (clicked)="decreaseNumericValue()">Down</uit-button>
 		</ng-container>
 	</ng-container>
 	<ng-container *ngIf="isMultiline">

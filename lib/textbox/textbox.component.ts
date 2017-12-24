@@ -1,6 +1,20 @@
-import { Component, forwardRef, Input } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { UitFormBase } from '../core/components/form-base';
+import {
+	Component,
+	forwardRef,
+	Inject,
+	Input,
+	Optional
+} from '@angular/core';
+import {
+	NG_VALUE_ACCESSOR,
+	NG_VALIDATORS,
+	NG_ASYNC_VALIDATORS,
+	Validator,
+	ValidatorFn,
+	AsyncValidator,
+	AsyncValidatorFn
+} from '@angular/forms';
+import { UitValidationBase } from '../core/components/validation-base';
 import { TextboxInputType } from '../core/enums/textbox-input-type';
 import { UpdateSourceTrigger } from '../core/enums/update-source-trigger.enum';
 /**
@@ -17,7 +31,7 @@ import { UpdateSourceTrigger } from '../core/enums/update-source-trigger.enum';
 		}
 	]
 })
-export class UitTextbox extends UitFormBase {
+export class UitTextbox extends UitValidationBase {
 	/**
 	 * Gets or sets a value that indicates the element as single or multine input.
 	 */
@@ -47,21 +61,22 @@ export class UitTextbox extends UitFormBase {
 	/**
 	 * Creates a new instance of the UitTextbox class.
 	 */
-	constructor() {
-		super();
+	constructor(@Optional() @Inject(NG_VALIDATORS) validators: Array<Validator | ValidatorFn>,
+							@Optional() @Inject(NG_ASYNC_VALIDATORS) validatorsAsync: Array<Validator | AsyncValidatorFn>) {
+		super(validators, validatorsAsync);
 		this.class = 'uit-textbox';
 		this.updateSource = UpdateSourceTrigger.lostFocus;
 	}
 	/**
 	 * Increases the current value as addition with the step value.
 	 */
-	public increaseValue(): void {
+	public increaseNumericValue(): void {
 		this.value = Number(this.value) + Number(this.step);
 	}
 	/**
 	 * Decreases the current value as subtraction with the step value.
 	 */
-	public decreaseValue(): void {
+	public decreaseNumericValue(): void {
 		this.value = Number(this.value) - Number(this.step);
 	}
 }

@@ -1,4 +1,4 @@
-import { Input, ViewChild } from '@angular/core';
+import { Input } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 import { UitElement } from './element';
 import { UpdateSourceTrigger } from '../enums/update-source-trigger.enum';
