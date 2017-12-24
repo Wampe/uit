@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { UitNavigation } from './navigation.component';
-export * from './navigation.component';
-
 import { UitNavigationItem } from './navigation-item.component';
+
+export * from './navigation.component';
 export * from './navigation-item.component';
 
 @NgModule({
