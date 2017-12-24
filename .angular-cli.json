@@ -6,7 +6,7 @@
   "apps": [
     {
       "name": "playground",
-      "root": "playground",
+      "root": "./src/playground",
       "outDir": "./dist/playground",
       "assets": [
         { "glob": "**/*", "input": "./assets/", "output": "./assets/" },
@@ -31,7 +31,7 @@
     },
     {
       "name": "demo",
-      "root": "demo-app",
+      "root": "./src/demo-app",
       "outDir": "./dist/demo-app",
       "assets": [
         { "glob": "**/*", "input": "./assets/", "output": "./assets/" },
@@ -62,27 +62,27 @@
   },
   "lint": [
     {
-      "project": "playground/tsconfig.app.json",
+      "project": "src/playground/tsconfig.app.json",
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "playground/tsconfig.spec.json",
+      "project": "src/playground/tsconfig.spec.json",
       "exclude": "**/node_modules/**"
 		},
 		{
-      "project": "demo-app/tsconfig.app.json",
+      "project": "src/demo-app/tsconfig.app.json",
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "demo-app/tsconfig.spec.json",
+      "project": "src/demo-app/tsconfig.spec.json",
       "exclude": "**/node_modules/**"
 		},
 		{
-      "project": "lib/tsconfig.es5.json",
+      "project": "src/lib/tsconfig.es5.json",
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "lib/tsconfig.spec.json",
+      "project": "src/lib/tsconfig.spec.json",
       "exclude": "**/node_modules/**"
     },
     {

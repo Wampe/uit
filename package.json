@@ -10,7 +10,7 @@
     "build:lib": "gulp build",
     "build:lib:watch": "gulp",
     "docs": "npm run docs:build",
-    "docs:build": "compodoc lib -p tsconfig.json -n \"UIT: User Interface Toolkit\" -d dist/docs --hideGenerator",
+    "docs:build": "compodoc src/lib -p tsconfig.json -n \"UIT: User Interface Toolkit\" -d dist/docs --hideGenerator",
     "docs:serve": "npm run docs:build -- -s",
     "docs:watch": "npm run docs:build -- -s -w",
     "lint": "ng lint",
