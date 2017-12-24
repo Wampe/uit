@@ -33,7 +33,7 @@ There are some `NPM scripts` given for the usage of the several parts.
 ```
 npm run build:lib
 ```
-You will find the output in the dist folder. The build also provides a copy of the library output into the `node_modules` folder that works for both Angular CLI based applications (playground and demo app) as source of the library. 
+You will find the output in the dist folder. The build also provides a copy of the library output into the `node_modules` folder that works for Angular CLI based applications within (demo app) as source of the library. 
 
 ### Playground
 The Playground app is for tests of usage and to play with the implementation. This is the area of chaos!
@@ -42,6 +42,8 @@ To start the Playground locally just use the NPM script
 npm run start:playground
 ```
 and open the app in the Browser. The predefined port to serve the playground app is 4200.
+
+The Playground uses the lib source folder as source for the library. So you can debug the library code in your IDE (i.e. with Debugger for Chrome).
 
 ### Demo application
 The Demo application is for the demonstration of all previous implementations. It will get extend with every new library ressource. Currently the app is only locally. In the future the app shall get published to a website.
@@ -53,11 +55,6 @@ and open the app in the Browser. The predefined port to serve the playground app
 
 ## Deployment
 Currently it is not planned to publish the library at npmjs.com
-
-### Consuming the library in a Angular application (via GitHub)
-```
-npm install --save git+https://git@github.com/Wampe/uit.git
-```
 
 ### Consuming the library in a Angular application (locally via link)
 At first create a build output of the library.
