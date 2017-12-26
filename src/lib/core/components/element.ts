@@ -53,6 +53,12 @@ export class UitElement {
 	@Input()
 	public disabled: boolean;
 	/**
+	 * Gets or sets a value that determines the order in which elements receive focus
+	 * when the user navigates through controls by using the TAB key.
+	 */
+	@Input()
+	public tabIndex: number;
+	/**
 	 * Gets a value indicating whether the mouse pointer is located over this element.
 	 */
 	public isMouseOver: boolean;

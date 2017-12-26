@@ -8,6 +8,7 @@
 	</uit-navigation> 
 	<router-outlet></router-outlet>
 	<form #form="ngForm">
+		<uit-checkbox name="checkbox" ngModel>Checkbox</uit-checkbox>
 			<uit-textbox name="testbox" label="Text 1" [min]="1" [max]="10" [minlength]="1" [maxlength]="100" step="1.75" type="number" [(ngModel)]="textValue" #textinput></uit-textbox>
 		<uit-textbox name="testboxRequired" [required]="true" [type]="email" email label="Required Textbox" [(ngModel)]="requiredText"></uit-textbox>
 		

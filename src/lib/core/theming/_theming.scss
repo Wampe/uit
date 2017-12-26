@@ -14,6 +14,7 @@ $default-element-thickness: 8px;
 @import '../../button/button.component';
 @import '../../toggle-button/toggle-button.component';
 @import '../../textbox/textbox.component';
+@import '../../checkbox/checkbox.component';
 
 @mixin uit-theme($typography: uit-typography-config()) {
 	@include uit-element();
@@ -24,6 +25,7 @@ $default-element-thickness: 8px;
 	@include uit-navigation();
 	@include uit-navigation-item($typography);
 	@include uit-button($typography);
-	@include uit-textbox($typography);
 	@include uit-toggle-button($typography);
+	@include uit-textbox($typography);
+	@include uit-checkbox($typography);
 }

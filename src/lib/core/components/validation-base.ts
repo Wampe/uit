@@ -1,4 +1,4 @@
-import { ViewChild } from '@angular/core';
+import { Input, ViewChild } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import {
@@ -14,7 +14,7 @@ import { IValidationResult } from '../interfaces/validation-result.interface';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 /**
- * Represents a basee implementation for Angular input components with validation.
+ * Represents a base implementation for Angular input components with validation.
  */
 export class UitValidationBase extends UitFormBase {
 	/**
@@ -22,6 +22,11 @@ export class UitValidationBase extends UitFormBase {
 	 */
 	@ViewChild(NgModel)
 	private model: NgModel;
+	/**
+	 * Gets or sets a value indicating whether the contents of the input component is mandatory.
+	 */
+	@Input()
+	public required: boolean;
 	/**
 	 * Creates a new instance of UitValidationBase class.
 	 * @param validators - Validator and validator functions.
