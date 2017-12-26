@@ -5,6 +5,7 @@
 <div class="input-wrapper">
 	<ng-container *ngIf="!isMultiline">
 		<input 	class="input"
+						[maxlength]="100"
 						[type]="type"
 						[min]="min"
 						[max]="max"
@@ -13,11 +14,10 @@
 						[required]="required"
 						[disabled]="disabled"
 						[(ngModel)]="value"
-						(blur)="blur($event)"
-						#name="ngModel">
+						(blur)="blur($event)">
 						<!-- https://angular.io/guide/form-validation -->
-		<div *ngIf="name.invalid && (name.dirty || name.touched)">
-  		Name is required
+		<div *ngIf="(invalid | async) && (model.dirty || model.touched)">
+			<div *ngFor="let message of failures | async">{{message}}</div>
 		</div>
 		<ng-container *ngIf="type === 'number'">
 			<uit-button (clicked)="increaseNumericValue()">Up</uit-button>

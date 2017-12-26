@@ -59,8 +59,10 @@ export class UitTextbox extends UitValidationBase {
 	public max: number;
 	/**
 	 * Creates a new instance of the UitTextbox class.
+	 * @param validators - Optinal validator and validator functions
+	 * @param validatorsAsync - Optinal validator and async validator functions
 	 */
-	constructor(@Optional() @Inject(NG_VALIDATORS) validators: Array<Validator | ValidatorFn>,
+	constructor(@Optional() @Inject(NG_VALIDATORS) validators:  Array<Validator | ValidatorFn>,
 							@Optional() @Inject(NG_ASYNC_VALIDATORS) validatorsAsync: Array<Validator | AsyncValidatorFn>) {
 		super(validators, validatorsAsync);
 		this.class = 'uit-textbox';

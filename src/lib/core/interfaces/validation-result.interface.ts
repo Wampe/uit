@@ -1,9 +1,9 @@
 /**
- * ToDO: comment
+ * Represents a object with information about the validation of a UitValidationBase element.
  */
 export interface IValidationResult {
 	/**
-	 * ToDo: comment
+	 * Validation error infromation.
 	 */
 	[validator: string]: string | boolean;
 }
