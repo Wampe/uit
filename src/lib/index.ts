@@ -12,7 +12,7 @@ export * from './button/button.module';
 export * from './toggle-button/toggle-button.module';
 export * from './textbox/textbox.module';
 
-export * from './core/interfaces/interfaces';
+export * from './core/interfaces';
 
 @NgModule({
 	exports: [
