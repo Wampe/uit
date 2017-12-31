@@ -10,7 +10,7 @@ import { ClickMode } from '../enums/click-mode.enum';
 /**
  * Represents the base class for all button components.
  */
-export class UitButtonBase extends UitElement {
+export class UitButtonElement extends UitElement {
 	/**
 	 * Emits the event that provides the click handler of the button element.
 	 */

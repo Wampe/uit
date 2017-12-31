@@ -14,7 +14,7 @@ import {
 	AsyncValidator,
 	AsyncValidatorFn
 } from '@angular/forms';
-import { UitValidationBase } from '../core/components/validation-base';
+import { UitValidationElement } from '../core/components/validation-element';
 import { TextboxInputType, UpdateSourceTrigger } from '../core/enums/index';
 /**
  * Represents a Angular input component, which takes a alpha-numeric or numeric only value.
@@ -30,7 +30,7 @@ import { TextboxInputType, UpdateSourceTrigger } from '../core/enums/index';
 		}
 	]
 })
-export class UitTextbox extends UitValidationBase {
+export class UitTextbox extends UitValidationElement {
 	/**
 	 * Gets or sets a value that indicates the element as single or multine input.
 	 */

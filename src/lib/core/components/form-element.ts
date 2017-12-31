@@ -6,7 +6,7 @@ import { UpdateSourceTrigger } from '../enums/update-source-trigger.enum';
  * UiFormBase is a base class for form (item) component core level implementations
  * building on Angular elements and (basic) input characteristics.
  */
-export class UitFormBase extends UitValueElement {
+export class UitFormElement extends UitValueElement {
 	/**
 	 * Gets or sets a value that will get displayed as label text.
 	 */

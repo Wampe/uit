@@ -1,13 +1,15 @@
 @mixin uit-checkbox($typography) {
 	.uit-checkbox {
 		display: inline-flex;
-		// flex-direction: column;
-		margin: $default-element-thickness;
+		margin: 4px;
+		align-items: center;
 
 		.bullet {
+			user-select: none;
+			margin: 4px;
 			border: 2px solid gray;
-			width: 32px;
-			height: 32px;
+			width: 24px;
+			height: 24px;
 			display: flex;
     	justify-content: center;
 
@@ -15,6 +17,12 @@
 				align-items: center;
 				display: flex;
 			}
+		}
+
+		.content {
+			display: flex;
+			align-items: center;
+			margin: 4px;
 		}
 	}
 }

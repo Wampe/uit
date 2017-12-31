@@ -2,7 +2,7 @@ import { Component,	forwardRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { UitToggleValueElement } from '../core/components/toggle-value-element';
 /**
- * ToDo: comment
+ * Represents a Angular input component that a user can select and clear.
  */
 @Component({
 	selector: 'uit-checkbox',

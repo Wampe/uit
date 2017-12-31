@@ -4,7 +4,7 @@ import {
 	HostBinding,
 	HostListener
 } from '@angular/core';
-import { UitButtonBase } from '../core/components/button-base';
+import { UitButtonElement } from '../core/components/button-element';
 /**
  * Represents a Angular toggle button component, which reacts to the click event.
  * The toggle button provides two states, similar to a checkbox element.
@@ -13,7 +13,7 @@ import { UitButtonBase } from '../core/components/button-base';
 	selector: 'uit-toggle-button',
 	templateUrl: './toggle-button.component.html',
 })
-export class UitToggleButton extends UitButtonBase {
+export class UitToggleButton extends UitButtonElement {
 	/**
 	 * Gets or sets a value that indicates whether a UitToggleButton element is currently checked.
 	 * Provides also the checked state specific style class.

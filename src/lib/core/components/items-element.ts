@@ -8,11 +8,11 @@ import {
 } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { UitElement } from './element';
-import { UitItemBase } from './item-base';
+import { UitItemElement } from './item-element';
 /**
  * Represents the base class for all items components.
  */
-export class UitItemsBase extends UitElement implements AfterViewInit, OnDestroy {
+export class UitItemsElement extends UitElement implements AfterViewInit, OnDestroy {
 	/**
 	 * Gets or sets a value that helds a itemssource collection.
 	 */
@@ -25,13 +25,13 @@ export class UitItemsBase extends UitElement implements AfterViewInit, OnDestroy
 	/**
 	 * Configures a content query with the corresponding items.
 	 */
-	@ContentChildren(UitItemBase)
-	public contentChildren: QueryList<UitItemBase>;
+	@ContentChildren(UitItemElement)
+	public contentChildren: QueryList<UitItemElement>;
 	/**
 	 * Configures a view query with the corresponding items.
 	 */
-	@ViewChildren(UitItemBase)
-	public viewChildren: QueryList<UitItemBase>;
+	@ViewChildren(UitItemElement)
+	public viewChildren: QueryList<UitItemElement>;
 	/**
 	 * Gets a value that indicates whether double source of items is declared.
 	 */
@@ -62,10 +62,10 @@ export class UitItemsBase extends UitElement implements AfterViewInit, OnDestroy
 	/**
 	 * Handles the current item´s component instance and registers the clicked event.
 	 */
-	private handleChildren(childs: QueryList<UitItemBase>): void {
-		childs.forEach((element: UitItemBase) => {
+	private handleChildren(childs: QueryList<UitItemElement>): void {
+		childs.forEach((element: UitItemElement) => {
 			this.clickSubscription = element.clicked.subscribe((event: MouseEvent) => {
-				childs.forEach((child: UitItemBase) => {
+				childs.forEach((child: UitItemElement) => {
 					child.isSelected = element === child;
 				});
 			});

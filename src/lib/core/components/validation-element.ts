@@ -9,14 +9,14 @@ import {
 	Validators,
 	ValidatorFn
 } from '@angular/forms';
-import { UitFormBase } from './form-base';
+import { UitFormElement } from './form-element';
 import { IValidationResult } from '../interfaces/validation-result.interface';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 /**
  * Represents a base implementation for Angular input components with validation.
  */
-export class UitValidationBase extends UitFormBase {
+export class UitValidationElement extends UitFormElement {
 	/**
 	 * Gets the a UitValidationBase domain model instance.
 	 */

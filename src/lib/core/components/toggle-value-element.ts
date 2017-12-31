@@ -15,12 +15,12 @@ export class UitToggleValueElement extends UitValueElement {
 	 */
 	@Input()
 	@HostBinding('class.active')
-	public checked: boolean;
+	public isChecked: boolean;
 	/**
 	 * Invoked when an click event is raised on this element.
 	 */
 	@HostListener('click')
 	private onClick() {
-		this.value = this.checked = !this.checked;
+		this.value = this.isChecked = !this.isChecked;
 	}
 }

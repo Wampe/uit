@@ -1,8 +1,8 @@
-import { UitButtonBase } from './button-base';
+import { UitButtonElement } from './button-element';
 /**
  * Represents the base class for all selectable components.
  */
-export class UitItemBase extends UitButtonBase {
+export class UitItemElement extends UitButtonElement {
 	/**
 	 * Gets a value that indicates whether a UitItemBase element is currently selected.
 	 */
