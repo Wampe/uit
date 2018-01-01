@@ -6,6 +6,7 @@ import { UitButtonModule } from './button/button.module';
 import { UitToggleButtonModule } from './toggle-button/toggle-button.module';
 import { UitTextboxModule } from './textbox/textbox.module';
 import { UitCheckboxModule } from './checkbox/checkbox.module';
+import { UitRadioModule } from './radio/radio.module';
 
 export * from './shell/shell.module';
 export * from './navigation/navigation.module';
@@ -13,6 +14,7 @@ export * from './button/button.module';
 export * from './toggle-button/toggle-button.module';
 export * from './textbox/textbox.module';
 export * from './checkbox/checkbox.module';
+export * from './radio/radio.module';
 
 export * from './core/interfaces';
 
@@ -23,7 +25,8 @@ export * from './core/interfaces';
 		UitButtonModule,
 		UitToggleButtonModule,
 		UitTextboxModule,
-		UitCheckboxModule
+		UitCheckboxModule,
+		UitRadioModule
 	],
 	schemas: [
 		CUSTOM_ELEMENTS_SCHEMA

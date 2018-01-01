@@ -6,6 +6,8 @@ import { INavigation } from '@wampe/uit';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+	public selectedNavigation: any;
+	public selectedRadio = 'Bacon';
 	public checkBox = true;
 	public title = 'app';
 	public requiredText: string;

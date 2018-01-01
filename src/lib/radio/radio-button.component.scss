@@ -1,0 +1,29 @@
+@mixin uit-radio-button($typography) {
+	.uit-radio-button {
+		display: inline-flex;
+		margin: 4px;
+		align-items: center;
+
+		.bullet {
+			user-select: none;
+			margin: 4px;
+			border: 2px solid gray;
+			border-radius: 12px;
+			width: 24px;
+			height: 24px;
+			display: flex;
+    	justify-content: center;
+
+			.decorator {
+				align-items: center;
+				display: flex;
+			}
+		}
+
+		.content {
+			display: flex;
+			align-items: center;
+			margin: 4px;
+		}
+	}
+}
