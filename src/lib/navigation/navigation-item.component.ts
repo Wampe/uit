@@ -1,11 +1,12 @@
 import {
 	Component,
 	forwardRef,
-	HostBinding,
 	Input
 } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { UitItemElement } from '../core/components/item-element';
-import { INavigation } from '../core/interfaces';
+import { INavigation } from '../core/interfaces/navigation.interface';
+import { ISelectable } from '../core/interfaces/selectable.interface';
 /**
 	* Represents a Angular component, which is a child element of a UitNavigation component.
  */
@@ -13,7 +14,16 @@ import { INavigation } from '../core/interfaces';
 	selector: 'uit-navigation-item',
 	templateUrl: './navigation-item.component.html',
 	providers: [
-		{ provide: UitItemElement, useExisting: forwardRef(() => UitNavigationItem) }
+		{
+			provide: NG_VALUE_ACCESSOR,
+			useExisting: forwardRef(() => UitNavigationItem),
+			multi: true
+		},
+		{
+			provide: UitItemElement,
+			useExisting: forwardRef(() => UitNavigationItem),
+			multi: true
+		}
 	]
 })
 export class UitNavigationItem extends UitItemElement implements INavigation {

@@ -1,7 +1,5 @@
 import { Input } from '@angular/core';
-import { ControlValueAccessor } from '@angular/forms';
 import { UitValueElement } from './value-element';
-import { UpdateSourceTrigger } from '../enums/update-source-trigger.enum';
 /**
  * UiFormBase is a base class for form (item) component core level implementations
  * building on Angular elements and (basic) input characteristics.

@@ -2,8 +2,7 @@ import {
 	EventEmitter,
 	HostListener,
 	Input,
-	Output,
-	Type
+	Output
 } from '@angular/core';
 import { UitElement } from './element';
 import { ClickMode } from '../enums/click-mode.enum';

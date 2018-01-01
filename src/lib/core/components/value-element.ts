@@ -15,9 +15,7 @@ export class UitValueElement extends UitElement implements ControlValueAccessor 
 	/**
 	 * Gets or sets the value of the input element.
 	 */
-	get value(): any {
-		return this.innerValue;
-	}
+	@Input()
 	set value(value: any) {
 		if (!this.disabled && this.innerValue !== value) {
 			this.innerValue = value;
@@ -25,6 +23,9 @@ export class UitValueElement extends UitElement implements ControlValueAccessor 
 				this.valueChanged(value);
 			}
 		}
+	}
+	get value(): any {
+		return this.innerValue;
 	}
 	/**
 	 * Updates the current value of the input component in data model.

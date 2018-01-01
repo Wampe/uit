@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
-// import { UitItemsElement, UitButtonElement } from '../core/components/index';
-import { UitNavigationItem } from './navigation-item.component';
+import { Component, forwardRef } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { UitItemsElement } from '../core/components/items-element';
-import { UitButtonElement } from '../core/components/button-element';
 /**
  * Represents a Angular items component, which provides a iteration of UitNavigationItem elements.
  */
 @Component({
 	selector: 'uit-navigation',
-	templateUrl: './navigation.component.html'
+	templateUrl: './navigation.component.html',
+	providers: [
+		{
+			provide: NG_VALUE_ACCESSOR,
+			useExisting: forwardRef(() => UitNavigation),
+			multi: true
+		}
+	]
 })
 export class UitNavigation extends UitItemsElement {
 	/**

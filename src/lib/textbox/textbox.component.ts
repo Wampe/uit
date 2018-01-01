@@ -15,7 +15,8 @@ import {
 	AsyncValidatorFn
 } from '@angular/forms';
 import { UitValidationElement } from '../core/components/validation-element';
-import { TextboxInputType, UpdateSourceTrigger } from '../core/enums/index';
+import { TextboxInputType } from '../core/enums/textbox-input-type';
+import { UpdateSourceTrigger } from '../core/enums/update-source-trigger.enum';
 /**
  * Represents a Angular input component, which takes a alpha-numeric or numeric only value.
  */
