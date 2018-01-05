@@ -1,0 +1,10 @@
+<ng-template #dynamicTemplate>
+	<uit-list-box-item *ngFor="let item of items"
+											[ngModel]="item">{{ item }}</uit-list-box-item>
+</ng-template>
+	
+<ng-container *ngIf="!isDouble">
+	<ng-container *ngIf="!items else dynamicTemplate">
+		<ng-content></ng-content>
+	</ng-container>
+</ng-container>

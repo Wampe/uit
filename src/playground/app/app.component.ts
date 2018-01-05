@@ -6,6 +6,7 @@ import { INavigation } from '@wampe/uit';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+	public listItems: string[] = ['Item 1', 'Item 2', 'item 3', 'Item 4'];
 	public selectedNavigation: any;
 	public selectedRadio = 'Bacon';
 	public checkBox = true;

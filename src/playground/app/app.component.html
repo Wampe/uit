@@ -9,28 +9,17 @@
 	<router-outlet></router-outlet>
 	<form #form="ngForm">
 
-		<uit-group-box header="I am a header">
-			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-
-		<uit-button>feifjofe</uit-button>
-		
-		<uit-checkbox name="checkbox" ngModel>Checkbox</uit-checkbox>
-		<uit-checkbox name="checkbox2" ngModel>Checkbox 2</uit-checkbox>
-		<uit-radio-group name="radio-group" ngModel>
-			<uit-radio-button name="zutat" value="Cheese">Option 1</uit-radio-button>
-			<uit-radio-button name="zutat" value="Bacon">Option 2</uit-radio-button>
-			<uit-radio-button name="zutat" value="Tomato">Option 3</uit-radio-button>
-		</uit-radio-group> 
-	</uit-group-box>
-		<uit-textbox name="testbox" label="Text 1" [min]="1" [max]="10" [minlength]="1" [maxlength]="100" step="1.75" type="number" [(ngModel)]="textValue" #textinput></uit-textbox>
-		<uit-textbox name="testboxRequired" [required]="true" [type]="email" email label="Required Textbox" [(ngModel)]="requiredText"></uit-textbox>
-		
-		<uit-textbox name="testboxmail" [(ngModel)]="email" email type="email" label="email"></uit-textbox>
-		<uit-textbox name="testboxpassword" type="password" updateSource="propertyChanged" [(ngModel)]="password" label="pw"></uit-textbox>
-		<uit-textbox name="testbox4" label="Text 2" type="text" disabled [(ngModel)]="textValue2" #textinput></uit-textbox>
-		<uit-textbox name="testbox2" isMultiline="true" type="number" label="Text 3" type="text" [required]="true" [(ngModel)]="textValue3" #textinputfocus></uit-textbox>
-
+		<uit-group-box header="ListBox">
+			<uit-list-box  name="listbox" ngModel>
+				<uit-list-box-item value="Item 1">Item 1</uit-list-box-item>
+				<uit-list-box-item value="Item 2">Item 3</uit-list-box-item>
+				<uit-list-box-item value="Item 3">Item 3</uit-list-box-item>
+				<uit-list-box-item value="Item 4">Item 4</uit-list-box-item>
+				<uit-list-box-item value="Item 5">Item 5</uit-list-box-item>
+				<uit-list-box-item value="Item 6">Item 6</uit-list-box-item>
+				<uit-list-box-item value="Item 7">Item 7</uit-list-box-item>
+			</uit-list-box>
+		</uit-group-box>
 	</form>
 	<pre>{{ form.value | json }}</pre> 
 	<!-- <pre>{{ form.checkbox2.isChecked | json }}</pre> -->

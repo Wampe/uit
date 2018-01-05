@@ -18,6 +18,9 @@ $default-element-thickness: 8px;
 @import '../../radio/radio-button.component';
 @import '../../radio/radio-group.component';
 @import '../../group-box/group-box.component';
+@import '../../list/list-box.component';
+@import '../../list/list-box-item.component';
+
 
 @mixin uit-theme($typography: uit-typography-config()) {
 	@include uit-element();
@@ -34,4 +37,6 @@ $default-element-thickness: 8px;
 	@include uit-radio-button($typography);
 	@include uit-radio-group();
 	@include uit-group-box();
+	@include uit-list-box();
+	@include uit-list-box-item();
 }

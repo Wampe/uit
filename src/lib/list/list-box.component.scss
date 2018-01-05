@@ -1,0 +1,9 @@
+@mixin uit-list-box() {
+	.uit-list-box {
+		display: flex;
+		flex-direction: column;
+		margin: 8px;
+		background-color: gray;
+		border: 1px solid black;
+	}
+}

@@ -1,0 +1,21 @@
+@mixin uit-list-box-item {
+	.uit-list-box-item {
+		margin: 4px;
+		padding: 8px;
+		flex: 1;
+		background-color: map-get($uit-theme-background, navigation-background);
+		color: map-get($uit-theme-foreground, navigation-foreground);
+
+		&:hover {
+			transition: $default-transition;
+			background-color: map-get($uit-theme-background, navigation-hover-background);
+			color: map-get($uit-theme-foreground, navigation-hover-foreground);
+		}
+
+		&.active {
+			transition: $default-transition;
+			background-color: map-get($uit-theme-background, navigation-pressed-background);
+			color: map-get($uit-theme-foreground, navigation-pressed-foreground);
+		}	
+	}
+}
