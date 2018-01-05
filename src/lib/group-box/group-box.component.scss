@@ -1,0 +1,22 @@
+@mixin uit-group-box() {
+	.uit-group-box {
+		display: flex;
+		flex-direction: column;
+		background-color: gray;
+		margin: 8px;
+
+		.group-box-header {
+			display: table;
+			background-color: black;
+			color: white;
+			margin-left: 16px;
+			padding: 4px 8px;
+			font-size: 12px;
+		}
+
+		.group-box-content {
+			flex: 1;
+			padding: 8px 24px;
+		}
+	}
+}

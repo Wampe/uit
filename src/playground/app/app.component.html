@@ -9,6 +9,10 @@
 	<router-outlet></router-outlet>
 	<form #form="ngForm">
 
+		<uit-group-box header="I am a header">
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
 		<uit-button>feifjofe</uit-button>
 		
 		<uit-checkbox name="checkbox" ngModel>Checkbox</uit-checkbox>
@@ -18,7 +22,7 @@
 			<uit-radio-button name="zutat" value="Bacon">Option 2</uit-radio-button>
 			<uit-radio-button name="zutat" value="Tomato">Option 3</uit-radio-button>
 		</uit-radio-group> 
-			
+	</uit-group-box>
 		<uit-textbox name="testbox" label="Text 1" [min]="1" [max]="10" [minlength]="1" [maxlength]="100" step="1.75" type="number" [(ngModel)]="textValue" #textinput></uit-textbox>
 		<uit-textbox name="testboxRequired" [required]="true" [type]="email" email label="Required Textbox" [(ngModel)]="requiredText"></uit-textbox>
 		

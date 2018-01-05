@@ -17,6 +17,7 @@ $default-element-thickness: 8px;
 @import '../../checkbox/checkbox.component';
 @import '../../radio/radio-button.component';
 @import '../../radio/radio-group.component';
+@import '../../group-box/group-box.component';
 
 @mixin uit-theme($typography: uit-typography-config()) {
 	@include uit-element();
@@ -32,4 +33,5 @@ $default-element-thickness: 8px;
 	@include uit-checkbox($typography);
 	@include uit-radio-button($typography);
 	@include uit-radio-group();
+	@include uit-group-box();
 }
