@@ -22,7 +22,8 @@ export class UitItemsElement extends UitValueElement implements AfterViewInit, O
 	/**
 	 * Indicates a specific attribute key that will get showen in the default item template.
 	 */
-	@Input() public displayValue: string;
+	@Input()
+	public displayValue: string;
 	/**
 	 * Configures a content query with the corresponding items.
 	 */

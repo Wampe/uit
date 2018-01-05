@@ -1,0 +1,25 @@
+<div (click)="toggle()" class="tree-view-item-header">
+	<ng-container *ngIf="items && !isExpanded">
+		+ 
+	</ng-container>
+	<ng-container *ngIf="items && isExpanded">
+		- 
+	</ng-container>
+	<ng-container *ngIf="header">
+		{{ header }}
+	</ng-container>
+	<ng-container *ngIf="!header">
+		<ng-content></ng-content>
+	</ng-container>
+</div>
+<ng-container *ngIf="items">
+	<div *ngIf="isExpanded"
+				class="items-presenter">
+		<uit-tree-view-item *ngFor="let item of items"
+												[header]="item.header"
+												[value]="item.header"
+												[items]="item.items">
+			{{ item.header }}
+		</uit-tree-view-item>
+	</div>
+</ng-container>

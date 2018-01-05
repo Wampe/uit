@@ -1,0 +1,8 @@
+<div class="items-presenter">
+	<uit-tree-view-item *ngFor="let item of items"
+											[header]="item.header"
+											[value]="item.header"
+											[items]="item.items">
+		{{ item.header }}
+	</uit-tree-view-item>
+</div>

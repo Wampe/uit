@@ -20,7 +20,8 @@ $default-element-thickness: 8px;
 @import '../../group-box/group-box.component';
 @import '../../list/list-box.component';
 @import '../../list/list-box-item.component';
-
+@import '../../tree/tree-view.component';
+@import '../../tree/tree-view-item.component';
 
 @mixin uit-theme($typography: uit-typography-config()) {
 	@include uit-element();
@@ -39,4 +40,6 @@ $default-element-thickness: 8px;
 	@include uit-group-box();
 	@include uit-list-box();
 	@include uit-list-box-item();
+	@include uit-tree-view();
+	@include uit-tree-view-item();
 }

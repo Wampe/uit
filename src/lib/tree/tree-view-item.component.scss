@@ -1,0 +1,14 @@
+@mixin uit-tree-view-item {
+	.uit-tree-view-item {
+		display: flex;
+		flex-direction: column;
+
+		.tree-view-item-header {
+			padding: 8px;
+		}
+
+		.items-presenter {
+			margin-left: 16px;
+		}
+	}
+}

@@ -9,6 +9,7 @@ import { UitCheckboxModule } from './checkbox/checkbox.module';
 import { UitRadioModule } from './radio/radio.module';
 import { UitGroupBoxModule } from './group-box/group-box.module';
 import { UitListModule } from './list/list.module';
+import { UitTreeModule } from './tree/tree.module';
 
 export * from './shell/shell.module';
 export * from './navigation/navigation.module';
@@ -19,6 +20,7 @@ export * from './checkbox/checkbox.module';
 export * from './radio/radio.module';
 export * from './group-box/group-box.module';
 export * from './list/list.module';
+export * from './tree/tree.module';
 
 export * from './core/interfaces';
 
@@ -32,7 +34,8 @@ export * from './core/interfaces';
 		UitCheckboxModule,
 		UitRadioModule,
 		UitGroupBoxModule,
-		UitListModule
+		UitListModule,
+		UitTreeModule
 	],
 	schemas: [
 		CUSTOM_ELEMENTS_SCHEMA

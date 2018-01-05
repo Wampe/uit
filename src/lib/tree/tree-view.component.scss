@@ -1,0 +1,6 @@
+@mixin uit-tree-view() {
+	.uit-tree-view {
+		display: flex;
+		flex-direction: column;
+	}
+}
