@@ -1,19 +1,19 @@
 /* eslint-disable */
-var gulp 						= require('gulp'),
-		path 						= require('path'),
-		ngc 						= require('@angular/compiler-cli/src/main').main,
-		rollup 					= require('gulp-rollup'),
-		rename 					= require('gulp-rename'),
-		sass 						= require('gulp-sass'),
-		del 						= require('del'),
-		runSequence			= require('run-sequence'),
-		inlineResources = require('./tools/gulp/inline-resources');
+const gulp = require('gulp');
+const path = require('path');
+const ngc = require('@angular/compiler-cli/src/main').main;
+const rollup = require('gulp-rollup');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const del = require('del');
+const runSequence = require('run-sequence');
+const inlineResources = require('./tools/gulp/inline-resources');
 
 const rootFolder = path.join(__dirname);
 const srcFolder = path.join(rootFolder, 'src/lib');
 const tmpFolder = path.join(rootFolder, '.tmp');
 const buildFolder = path.join(rootFolder, 'build');
-const distFolder = path.join(rootFolder, 'dist/uit');
+const distFolder = path.join(rootFolder, 'dist/lib');
 const modulesFolder = path.join(rootFolder, 'node_modules/@wampe/uit');
 
 /**
@@ -43,7 +43,6 @@ gulp.task('inline-resources', function () {
 	return Promise.resolve()
 		.then(() => inlineResources(tmpFolder));
 });
-
 
 /**
  * 4. Run the Angular compiler, ngc, on the /.tmp folder. This will output all

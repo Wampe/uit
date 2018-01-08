@@ -1,6 +1,5 @@
 {
   "name": "wampe-uit",
-  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "start:playground": "ng serve --app=playground --port=4200",
