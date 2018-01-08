@@ -28,19 +28,19 @@ export class AppComponent {
 	public navigation: INavigation[] = [
 		{
 			label: 'Home',
-			path: '/'
+			path: '/home'
 		},
 		{
 			label: 'Events',
-			path: '/'
+			path: '/events'
 		},
 		{
 			label: 'Groups',
-			path: '/'
+			path: '/groups'
 		},
 		{
 			label: 'Guestbook',
-			path: '/'
+			path: '/guestbook'
 		},
 	];
 

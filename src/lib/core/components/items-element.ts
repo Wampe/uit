@@ -1,14 +1,17 @@
 import {
 	AfterViewInit,
+	ContentChild,
 	ContentChildren,
 	Input,
 	OnDestroy,
 	QueryList,
+	TemplateRef,
 	ViewChildren
 } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { UitValueElement } from './value-element';
 import { UitItemElement } from './item-element';
+import { UitItemTemplateDirective } from '../../list/item-template.directive';
 import { ISelectable } from '../interfaces/selectable.interface';
 /**
  * Represents the base class for all items components.
@@ -25,6 +28,16 @@ export class UitItemsElement extends UitValueElement implements AfterViewInit, O
 	@Input()
 	public displayValue: string;
 	/**
+	 * Gets or sets a value for a message displayed when no item exists.
+	 */
+	@Input()
+	public noItemsMessage: string;
+	/**
+	 * Defines a custom item template for the UitListItemComponent.
+	 */
+	@ContentChild(UitItemTemplateDirective, { read: TemplateRef })
+	public itemTemplate: TemplateRef<UitItemTemplateDirective>;
+	/**
 	 * Configures a content query with the corresponding items.
 	 */
 	@ContentChildren(UitItemElement)
@@ -39,6 +52,10 @@ export class UitItemsElement extends UitValueElement implements AfterViewInit, O
 	 */
 	public isDouble: boolean;
 	/**
+	 * Gets a value that indicates whether items existing.
+	 */
+	public hasItems: boolean;
+	/**
 	 * Represents a disposable resource, such as the execution of an Observable.
 	 */
 	private clickSubscription: Subscription;
@@ -46,6 +63,15 @@ export class UitItemsElement extends UitValueElement implements AfterViewInit, O
 	 * Represents a disposable resource, such as the execution of an Observable.
 	 */
 	private childChangedSubscription: Subscription;
+	/**
+	 * Creates a new instance of UitItemsElement class.
+	 */
+	constructor() {
+		super();
+		this.displayValue = '';
+		this.hasItems = false;
+		this.noItemsMessage = 'Currently no items.';
+	}
 	/**
 	 * Lifecycle hook that is called after a component's view has been fully initialized.
 	 */
@@ -89,6 +115,11 @@ export class UitItemsElement extends UitValueElement implements AfterViewInit, O
 					this.value = selectedItem.value;
 				}
 			});
+		});
+		setTimeout(() => {
+			this.hasItems = (this.items && this.items.length > 0)
+				|| (this.contentChildren && this.contentChildren.length > 0)
+				|| (this.viewChildren && this.viewChildren.length > 0);
 		});
 	}
 }

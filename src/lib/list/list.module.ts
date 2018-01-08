@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { UitItemTemplateDirective } from './item-template.directive';
+export * from './item-template.directive';
+
 import { UitListBoxItem } from './list-box-item.component';
 export * from './list-box-item.component';
 
@@ -14,10 +17,12 @@ export * from './list-box.component';
 		FormsModule
 	],
 	declarations: [
+		UitItemTemplateDirective,
 		UitListBoxItem,
 		UitListBox
 	],
 	exports: [
+		UitItemTemplateDirective,
 		UitListBoxItem,
 		UitListBox
 	]

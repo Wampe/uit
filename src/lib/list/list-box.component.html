@@ -1,10 +1,19 @@
-<ng-template #dynamicTemplate>
-	<uit-list-box-item *ngFor="let item of items"
-											[ngModel]="item">{{ item }}</uit-list-box-item>
+<ng-template #defaultItemTemplate let-item>
+	{{ displayValue ? item[displayValue] : item }}
+</ng-template>
+	
+<ng-template #dynamic>
+	<uit-list-box-item *ngFor="let item of items" 
+											[ngModel]="item">
+		<ng-container *ngTemplateOutlet="itemTemplate ? itemTemplate : defaultItemTemplate; context: {$implicit: item}"></ng-container>
+	</uit-list-box-item>
 </ng-template>
 	
 <ng-container *ngIf="!isDouble">
-	<ng-container *ngIf="!items else dynamicTemplate">
+	<ng-container *ngIf="!items else dynamic">
 		<ng-content></ng-content>
+	</ng-container>
+	<ng-container *ngIf="!hasItems">
+		{{ noItemsMessage }}
 	</ng-container>
 </ng-container>

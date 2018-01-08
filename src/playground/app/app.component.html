@@ -14,14 +14,22 @@
 		</uit-group-box> -->
 
 		<uit-group-box header="ListBox">
-			<uit-list-box  name="listbox" ngModel>
-				<uit-list-box-item value="Item 1">Item 1</uit-list-box-item>
+			<uit-list-box name="listbox" [items]="navigation" ngModel>
+				<ng-template uitItemTemplate let-item>
+					<div>
+						<img src="bild.jpg"> {{ item.label }}
+					</div>
+					<div>
+						{{ item.path }}
+					</div>
+				</ng-template>
+				<!-- <uit-list-box-item value="Item 1">Item 1</uit-list-box-item>
 				<uit-list-box-item value="Item 2">Item 3</uit-list-box-item>
 				<uit-list-box-item value="Item 3">Item 3</uit-list-box-item>
 				<uit-list-box-item value="Item 4">Item 4</uit-list-box-item>
 				<uit-list-box-item value="Item 5">Item 5</uit-list-box-item>
 				<uit-list-box-item value="Item 6">Item 6</uit-list-box-item>
-				<uit-list-box-item value="Item 7">Item 7</uit-list-box-item>
+				<uit-list-box-item value="Item 7">Item 7</uit-list-box-item> -->
 			</uit-list-box>
 		</uit-group-box>
 	</form>
@@ -39,5 +47,5 @@
 	<br><br>
 	LostFocus <br>
 	NgModel: {{ textValue3 }}
-	<uit-site-footer>Version: 0.0.0</uit-site-footer>  
+	<uit-site-footer>Version: 0.11.0</uit-site-footer>  
 </uit-shell>
