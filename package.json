@@ -5,7 +5,7 @@
     "start:playground": "ng serve --app=playground --port=4200",
     "start:demo": "ng serve --app=demo --port=4201",
     "build:playground": "ng build --app=playground --prod",
-    "build:demo": "ng build --app=demo --prod",
+    "build:demo": "ng build --app=demo --prod --base-href /uit",
     "build:lib": ".\\node_modules\\.bin\\gulp build",
     "build:lib:watch": ".\\node_modules\\.bin\\gulp",
     "docs": "npm run docs:build",
