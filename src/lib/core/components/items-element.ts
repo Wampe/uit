@@ -103,6 +103,7 @@ export class UitItemsElement extends UitValueElement implements AfterViewInit, O
 	}
 	/**
 	 * Handles the current item´s component instance and registers the clicked event.
+	 * @param childs - Collection of current item components.
 	 */
 	private handleChildren(childs: QueryList<ISelectable>): void {
 		childs.forEach((element: ISelectable) => {
@@ -110,7 +111,7 @@ export class UitItemsElement extends UitValueElement implements AfterViewInit, O
 				childs.forEach((child: ISelectable) => {
 					child.isSelected = element === child;
 				});
-				const selectedItem =  childs.find((item: ISelectable) => item.isSelected);
+				const selectedItem = childs.find((item: ISelectable) => item.isSelected);
 				if (selectedItem) {
 					this.value = selectedItem.value;
 				}

@@ -13,7 +13,7 @@
 	</ng-container>
 </div>
 <ng-container *ngIf="items">
-	<div *ngIf="isExpanded"
+	<div [hidden]="!isExpanded"
 				class="items-presenter">
 		<uit-tree-view-item *ngFor="let item of items"
 												[header]="item.header"

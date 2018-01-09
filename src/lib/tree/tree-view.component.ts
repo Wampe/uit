@@ -2,7 +2,8 @@ import { Component, forwardRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { UitItemsElement } from '../core/components/items-element';
 /**
- * ToDo: comment
+ * Represents a Angular component that displays hierarchical data in a tree structure
+ * that has items that can expand and collapse.
  */
 @Component({
 	selector: 'uit-tree-view',

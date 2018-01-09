@@ -2,13 +2,30 @@
 	.uit-tree-view-item {
 		display: flex;
 		flex-direction: column;
+		
+		margin: 4px;
+		flex: 1;
+		background-color: map-get($uit-theme-background, navigation-background);
+		color: map-get($uit-theme-foreground, navigation-foreground);
 
 		.tree-view-item-header {
 			padding: 8px;
+
+			&:hover {
+				transition: $default-transition;
+				background-color: map-get($uit-theme-background, navigation-hover-background);
+				color: map-get($uit-theme-foreground, navigation-hover-foreground);
+			}
 		}
 
 		.items-presenter {
 			margin-left: 16px;
 		}
+
+		// &.active {
+		// 	transition: $default-transition;
+		// 	background-color: map-get($uit-theme-background, navigation-pressed-background);
+		// 	color: map-get($uit-theme-foreground, navigation-pressed-foreground);
+		// }	
 	}
 }

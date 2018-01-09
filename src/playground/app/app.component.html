@@ -1,6 +1,6 @@
 <uit-shell>
 	<uit-site-header>User Interface Toolkit - Playground</uit-site-header> 
-	<uit-navigation name="navigation" #test>
+	<uit-navigation name="navigation">
 		<uit-navigation-item *ngFor="let item of navigation"
 													[label]="item.label"
 													[path]="item.path">
@@ -8,44 +8,10 @@
 	</uit-navigation> 
 	<router-outlet></router-outlet>
 	<form #form="ngForm">
-
-		<!-- <uit-group-box header="TreeView">
+		<uit-group-box header="TreeView">
 			<uit-tree-view [items]="treeView" name="Tree_View" ngModel></uit-tree-view>
-		</uit-group-box> -->
-
-		<uit-group-box header="ListBox">
-			<uit-list-box name="listbox" [items]="navigation" ngModel>
-				<ng-template uitItemTemplate let-item>
-					<div>
-						<img src="bild.jpg"> {{ item.label }}
-					</div>
-					<div>
-						{{ item.path }}
-					</div>
-				</ng-template>
-				<!-- <uit-list-box-item value="Item 1">Item 1</uit-list-box-item>
-				<uit-list-box-item value="Item 2">Item 3</uit-list-box-item>
-				<uit-list-box-item value="Item 3">Item 3</uit-list-box-item>
-				<uit-list-box-item value="Item 4">Item 4</uit-list-box-item>
-				<uit-list-box-item value="Item 5">Item 5</uit-list-box-item>
-				<uit-list-box-item value="Item 6">Item 6</uit-list-box-item>
-				<uit-list-box-item value="Item 7">Item 7</uit-list-box-item> -->
-			</uit-list-box>
+			<pre>{{ form.value | json }}</pre> 
 		</uit-group-box>
 	</form>
-	<pre>{{ form.value | json }}</pre> 
-	<!-- <pre>{{ form.checkbox2.isChecked | json }}</pre> -->
-	<!-- <pre>	{{ test.value | json}}</pre> -->
-
-<br>
-	ProeprtyChanged 
-	<br>
-	NgMOdel: {{ textValue }}
-	<br><br>
-	Disabled <br>
-	NgMOdel: {{ textValue2 }}
-	<br><br>
-	LostFocus <br>
-	NgModel: {{ textValue3 }}
 	<uit-site-footer>Version: 0.11.0</uit-site-footer>  
 </uit-shell>
