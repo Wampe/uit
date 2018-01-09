@@ -1,26 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { UitModule } from '@wampe/uit';
 
 import { AppComponent } from './app.component';
-import { StartComponent } from './views/start.component';
 
 @NgModule({
 	declarations: [
-		AppComponent,
-		StartComponent
+		AppComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
-		RouterModule.forRoot([
-			{
-				path: 'start',
-				component: StartComponent
-			}
-		]),
+		RouterModule.forRoot([]),
 		UitModule
 	],
 	providers: [],
