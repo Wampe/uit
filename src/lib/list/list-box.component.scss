@@ -1,9 +1,19 @@
 @mixin uit-list-box() {
 	.uit-list-box {
+		overflow: hidden;
 		display: flex;
+		flex: 1;
 		flex-direction: column;
 		margin: 8px;
 		background-color: gray;
 		border: 1px solid black;
+
+		.list-body {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+			overflow-y: auto;
+		}
 	}
 }

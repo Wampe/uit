@@ -6,12 +6,18 @@
 													[path]="item.path">
 		</uit-navigation-item>
 	</uit-navigation> 
-	<router-outlet></router-outlet>
+	<!-- <router-outlet></router-outlet>
 	<form #form="ngForm">
 		<uit-group-box header="TreeView">
 			<uit-tree-view [items]="treeView" name="Tree_View" ngModel></uit-tree-view>
 			<pre>{{ form.value | json }}</pre> 
 		</uit-group-box>
-	</form>
+
+		
+	</form> -->
+
+	<uit-list-box [items]="listItems" name="List_Box" ngModel>
+	</uit-list-box>
+
 	<uit-site-footer>Version: 0.11.0</uit-site-footer>  
 </uit-shell>

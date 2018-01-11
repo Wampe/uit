@@ -3,17 +3,21 @@
 </ng-template>
 	
 <ng-template #dynamic>
-	<uit-list-box-item *ngFor="let item of items" 
-											[ngModel]="item">
-		<ng-container *ngTemplateOutlet="itemTemplate ? itemTemplate : defaultItemTemplate; context: {$implicit: item}"></ng-container>
-	</uit-list-box-item>
+	<uit-virtual-scroll #scroll [items]="items" uitScrollBar>
+		<uit-list-box-item *ngFor="let item of scroll.viewPortItems" 
+												[ngModel]="item">
+			<ng-container *ngTemplateOutlet="itemTemplate ? itemTemplate : defaultItemTemplate; context: {$implicit: item}"></ng-container>
+		</uit-list-box-item>
+	</uit-virtual-scroll>
 </ng-template>
-	
+
 <ng-container *ngIf="!isDouble">
-	<ng-container *ngIf="!items else dynamic">
-		<ng-content></ng-content>
-	</ng-container>
-	<ng-container *ngIf="!hasItems">
-		{{ noItemsMessage }}
-	</ng-container>
+	<!-- <div class="list-body"> -->
+		<ng-container *ngIf="!items else dynamic">
+			<ng-content></ng-content>
+		</ng-container>
+		<ng-container *ngIf="!hasItems">
+			{{ noItemsMessage }}
+		</ng-container>
+	<!-- </div> -->
 </ng-container>

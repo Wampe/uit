@@ -13,7 +13,7 @@ export interface ITreeViewData {
 })
 export class AppComponent {
 	public treeView: ITreeViewData[];
-	public listItems: string[] = ['Item 1', 'Item 2', 'item 3', 'Item 4'];
+	public listItems: string[];
 	public selectedNavigation: any;
 	public selectedRadio = 'Bacon';
 	public checkBox = true;
@@ -120,6 +120,11 @@ export class AppComponent {
 				header: 'TreeView 5_4'
 			}]
 		}];
+
+		this.listItems = [];
+		for (let i = 0; i < 1000; i++) {
+			this.listItems.push('Items ' + i);
+		}
 	}
 
 	public hello(): void {
