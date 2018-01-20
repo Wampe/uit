@@ -1,11 +1,14 @@
-@mixin uit-navigation() {
+@mixin uit-navigation($theme) {
+	// $typography: map-get($theme, typography);
+	// $background: map-get($theme, background);
+	// $foreground: map-get($theme, foreground);
 
 	.uit-navigation {
 		display: flex;
 		flex-direction: column;
 
 		flex: 0 0 220px;
-		background-color: map-get($uit-theme-background, side-bar-background);
-		color: map-get($uit-theme-foreground, text);
+		// background-color: map-get($background, side-bar-background);
+		// color: map-get($foreground, text);
 	}
 }

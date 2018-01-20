@@ -19,7 +19,7 @@ export class UitElement {
 	/**
 	 * Provides the horizontal alignment class for right aligned elements.
 	 */
-	@HostBinding('class.horizontal-align-rigth')
+	@HostBinding('class.horizontal-align-right')
 	private	alignRight: boolean;
 	/**
 	 * Provides the horizontal alignment class for centered elements.

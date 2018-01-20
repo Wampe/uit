@@ -1,36 +1,39 @@
-@mixin uit-toggle-button($typography) {
+@mixin uit-toggle-button($theme) {
+	$typography: map-get($theme, typography);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
 
 	.uit-toggle-button {
-		@include uit-typography($typography, button);
+		@include uit-typography($typography, interaction);
 		
 		cursor: default;
 		user-select: none;
-		margin: $default-element-thickness;
-		padding: $default-element-thickness;
+		margin: $default-thickness;
+		padding: $default-thickness;
 		transition: $default-transition;
-		background-color: map-get($uit-theme-background, interaction-background);
-		color: map-get($uit-theme-foreground, interaction-foreground);
+		background-color: map-get($background, interaction);
+		color: map-get($foreground, interaction);
 		
 		&:hover {
 			transition: $default-transition;
-			background-color: map-get($uit-theme-background, interaction-hover-background);
-			color: map-get($uit-theme-foreground, interaction-hover-foreground);
+			background-color: map-get($background, interaction-hover);
+			color: map-get($foreground, interaction-hover);
 		}
 
 		&.active {
 			transition: $default-transition;
-			background-color: map-get($uit-theme-background, interaction-pressed-background);
-			color: map-get($uit-theme-foreground, interaction-pressed-foreground);
+			background-color: map-get($background, interaction-pressed);
+			color: map-get($foreground, interaction-pressed);
 		}	
 
 		&:focus {
-			border: 2px solid map-get($uit-theme-background, focus);
+			border: 2px solid map-get($background, focus);
 		}
 
 		&[disabled] {
 			pointer-events: none;
-			background-color: map-get($uit-theme-background, interaction-disabled-background);
-			color: map-get($uit-theme-foreground, interaction-disabled-foreground);
+			background-color: map-get($background, interaction-disabled);
+			color: map-get($foreground, interaction-disabled);
 		}
 	}
 }

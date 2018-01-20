@@ -2,32 +2,62 @@ $uit-theme-background: (
 	background: #444,
 	focus: orange,
 
-	header-background: #222,
-	footer-background: #222,
-	side-bar-background: #666,
+	header: #222,
+	footer: #222,
+	side-bar: #666,
 
-	navigation-background: #aaa,
-	navigation-hover-background: #ccc,
-	navigation-pressed-background: #888,
-	navigation-disabledbackground: gray,
+	content: #666,
+	content-header: #222,
 
-	interaction-background: #444,
-	interaction-hover-background: #666,
-	interaction-pressed-background: #222,
-	interaction-disabled-background: gray,
+	navigation-item: #aaa,
+	navigation-item-hover: #ccc,
+	navigation-item-pressed: #888,
+	navigation-item-disabled: gray,
+
+	interaction: #444,
+	interaction-hover: #666,
+	interaction-pressed: #222,
+	interaction-disabled: gray,
+
+	input: #444,
+	input-hover: #666,
+	input-pressed: #222,
+	input-disabled: gray,
+
+	item: #444,
+	item-hover: #666,
+	item-pressed: #222,
+	item-disabled: gray,
 );
 
 $uit-theme-foreground: (
 	text: white,
 	accent-text: #333,
 	
-	navigation-foreground: #222,
-	navigation-hover-foreground: #222,
-	navigation-pressed-foreground: #222,
-	navigation-disabled-foreground: darkgray,
+	header: #fff,
+	footer: #fff,
+	side-bar: #fff,
 
-	interaction-foreground: white,
-	interaction-hover-foreground: white,
-	interaction-pressed-foreground: white,
-	interaction-disabled-foreground: darkgray
+	content: #fff, // TODo: mandatory?
+	content-header: #fff,
+
+	navigation-item: #222,
+	navigation-item-hover: #222,
+	navigation-item-pressed: #222,
+	navigation-item-disabled: darkgray,
+
+	interaction: white,
+	interaction-hover: white,
+	interaction-pressed: white,
+	interaction-disabled: darkgray,
+
+	input: white,
+	input-hover: white,
+	input-pressed: white,
+	input-disabled: darkgray,
+
+	item: white,
+	item-hover: white,
+	item-pressed: white,
+	item-disabled: white,
 );

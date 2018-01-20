@@ -4,12 +4,10 @@
   "scripts": {
     "start:playground": "ng serve --app=playground --port=4200",
     "start:demo": "ng serve --app=demo --port=4201",
-    "build:playground": "ng build --app=playground --prod",
     "build:demo": "ng build --app=demo --prod --base-href /uit/",
     "build:demo:prod": "npm run build:demo && npm run docs:demo",
     "build:lib": ".\\node_modules\\.bin\\gulp build",
     "build:lib:watch": ".\\node_modules\\.bin\\gulp",
-    "build:all": "npm run build:lib && npm run docs && npm run build:playground && npm run build:demo",
     "build:prod": "npm run build:lib && npm run build:demo:prod",
     "docs": "npm run docs:build -- -d dist/docs",
     "docs:demo": "npm run docs:build -- -d dist/demo-app/docs",

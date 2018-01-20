@@ -1,30 +1,32 @@
 @function uit-typography-level(
-  $font-size,
-  $line-height: $font-size,
-  $font-weight: 400,
-  $font-family: null) {
-  @return (
+	$font-size,
+	$line-height: $font-size,
+	$font-weight: 400,
+	$font-family: null) {
+	@return (
 		font-family: $font-family,	
 		font-size: $font-size,    
-    font-weight: $font-weight,
+		font-weight: $font-weight,
 		line-height: $line-height
-  );
+	);
 }
 
 @function uit-typography-config(
-  $font-family:   'Open Sans',
-  $headline:      uit-typography-level(24px, 32px, 400),
+	$font-family:	'Open Sans',
+	$headline:      uit-typography-level(24px, 32px, 400),
 	$body:        	uit-typography-level(14px, 20px, 400),
-	$button:       	uit-typography-level(12px, 20px, 700),
-  $label:       	uit-typography-level(12px, 20px, 400),
-  $input:         uit-typography-level(14px, 1.125, 400)
+	$label:       	uit-typography-level(12px, 20px, 400),
+	$interaction:	uit-typography-level(12px, 20px, 700),
+	$input:         uit-typography-level(14px, 1.125, 400),
+	$item:			uit-typography-level(14px, 18px, 400)
 ) {
 	$config: (
-		headline:			$headline,
+		headline:		$headline,
 		body:       	$body,
-		button: 			$button,
-    label:      	$label,
-    input:      	$input
+		label:      	$label,
+		interaction:	$interaction,
+		input:      	$input,
+		item:			$item
 	);
 	@return map-merge($config, (font-family: $font-family));
 }
@@ -37,6 +39,6 @@
 	$font-family: map-get($config, font-family);
 	$font-size: uit-typography-get($config, $level, font-size);
 	$font-weight: uit-typography-get($config, $level, font-weight);
-  $line-height: uit-typography-get($config, $level, line-height);
-  font: $font-weight #{$font-size}/#{$line-height} $font-family;
+	$line-height: uit-typography-get($config, $level, line-height);
+	font: $font-weight #{$font-size}/#{$line-height} $font-family;
 }

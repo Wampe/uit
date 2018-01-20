@@ -1,10 +1,12 @@
-@mixin uit-site-header() {
+@mixin uit-site-header($theme) {
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
 
 	.uit-site-header {
 		display: flex;
 		align-items: center;
-		padding: $default-element-thickness;
-		background-color: map-get($uit-theme-background, header-background);
-		color: map-get($uit-theme-foreground, text);
+		padding: $default-thickness;
+		background-color: map-get($background, header);
+		color: map-get($foreground, header);
 	}
 }

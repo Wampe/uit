@@ -1,10 +1,15 @@
-@mixin uit-site($typography) {
+@mixin uit-site($theme) {
+	$typography: map-get($theme, typography);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
+
 	html, body {
 		@include uit-typography($typography, body);
+
 		padding: 0;
 		margin: 0;
 		height: 100vh;
-		background-color: map-get($uit-theme-background, background);
-		color: map-get($uit-theme-foreground, text);
+		background-color: map-get($background, background);
+		color: map-get($foreground, text);
 	}
 }

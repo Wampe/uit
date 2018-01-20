@@ -1,17 +1,23 @@
-@mixin uit-checkbox($typography) {
+@mixin uit-checkbox($theme) {
+	$typography: map-get($theme, typography);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
+
 	.uit-checkbox {
+		// @include uit-typography($typography, button); // ToDo: theme resouce
+		
 		display: inline-flex;
-		margin: 4px;
 		align-items: center;
+		margin: $default-thickness;
 
 		.bullet {
 			user-select: none;
-			margin: 4px;
-			border: 2px solid gray;
-			width: 24px;
-			height: 24px;
+			border: 2px solid gray; // ToDo: theme resouce
+			width: $bullet-width; // ToDo: theme resouce
+			height: $bullet-height; // ToDo: theme resouce
 			display: flex;
-    	justify-content: center;
+			justify-content: center;
+			margin: $default-thickness;
 
 			.decorator {
 				align-items: center;
@@ -22,7 +28,7 @@
 		.content {
 			display: flex;
 			align-items: center;
-			margin: 4px;
+			margin: $default-thickness;
 		}
 	}
 }

@@ -1,10 +1,24 @@
 $default-transition: all 0.1s ease-in-out;
-$default-element-thickness: 8px;
+$default-thickness: 8px;
+$bullet-width: 24px;
+$bullet-height: 24px;
 
 @import 'palette';
 @import 'typography';
 @import 'element';
 @import 'site';
+
+@function createTheme(
+	$typography: uit-typography-config(),
+	$background: $uit-theme-background,
+	$foreground: $uit-theme-foreground
+) {
+	@return (
+		typography: $typography,
+		background: $background,
+		foreground: $foreground
+	);
+}
 
 @import '../../shell/shell.component';
 @import '../../shell/site-header/site-header.component';
@@ -23,23 +37,23 @@ $default-element-thickness: 8px;
 @import '../../tree/tree-view.component';
 @import '../../tree/tree-view-item.component';
 
-@mixin uit-theme($typography: uit-typography-config()) {
+@mixin uit-theme($theme: createTheme()) {
 	@include uit-element();
-	@include uit-site($typography);
+	@include uit-site($theme);
 	@include uit-shell();
-	@include uit-site-header();
-	@include uit-site-footer();
-	@include uit-navigation();
-	@include uit-navigation-item($typography);
-	@include uit-button($typography);
-	@include uit-toggle-button($typography);
-	@include uit-textbox($typography);
-	@include uit-checkbox($typography);
-	@include uit-radio-button($typography);
+	@include uit-site-header($theme);
+	@include uit-site-footer($theme);
+	@include uit-navigation($theme);
+	@include uit-navigation-item($theme);
+	@include uit-button($theme);
+	@include uit-toggle-button($theme);
+	@include uit-textbox($theme);
+	@include uit-checkbox($theme);
+	@include uit-radio-button($theme);
 	@include uit-radio-group();
-	@include uit-group-box();
-	@include uit-list-box();
-	@include uit-list-box-item();
+	@include uit-group-box($theme);
+	@include uit-list-box($theme);
+	@include uit-list-box-item($theme);
 	@include uit-tree-view();
-	@include uit-tree-view-item();
+	@include uit-tree-view-item($theme);
 }

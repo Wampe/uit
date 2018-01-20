@@ -1,7 +1,10 @@
-@mixin uit-navigation-item($typography) {
+@mixin uit-navigation-item($theme) {
+	$typography: map-get($theme, typography);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
 
 	.uit-navigation-item {
-		@include uit-typography($typography, button);
+		@include uit-typography($typography, interaction);
 		
 		display: flex;
 		flex-direction: column;
@@ -10,31 +13,31 @@
 			cursor: default;
 			user-select: none;
 			text-decoration: unset;
-			padding: $default-element-thickness;
+			padding: $default-thickness;
 			transition: $default-transition;
-			background-color: map-get($uit-theme-background, navigation-background);
-			color: map-get($uit-theme-foreground, navigation-foreground);
+			background-color: map-get($background, navigation-item);
+			color: map-get($foreground, navigation-item);
 			
 			&:hover {
 				transition: $default-transition;
-				background-color: map-get($uit-theme-background, navigation-hover-background);
-				color: map-get($uit-theme-foreground, navigation-hover-foreground);
+				background-color: map-get($background, navigation-item-hover);
+				color: map-get($foreground, navigation-item-hover);
 			}
 
 			&.active {
 				transition: $default-transition;
-				background-color: map-get($uit-theme-background, navigation-pressed-background);
-				color: map-get($uit-theme-foreground, navigation-pressed-foreground);
+				background-color: map-get($background, navigation-item-pressed);
+				color: map-get($foreground, navigation-item-pressed);
 			}	
 
 			&:focus {
-				border: 2px solid map-get($uit-theme-background, focus);
+				border: 2px solid map-get($background, focus); // ToDo: generic focus definition
 			}
 
 			&[disabled] {
 				pointer-events: none;
-				background-color: map-get($uit-theme-background, navigation-disabled-background);
-				color: map-get($uit-theme-foreground, navigation-disabled-foreground);
+				background-color: map-get($background, navigation-item-disabled);
+				color: map-get($foreground, navigation-item-disabled);
 			}
 		}
 	}

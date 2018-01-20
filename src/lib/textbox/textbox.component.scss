@@ -1,15 +1,17 @@
-@mixin uit-textbox($typography) {
+@mixin uit-textbox($theme) {
+	$typography: map-get($theme, typography);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
 
 	// Angular VALIDATION Classes
 	// https://angular.io/guide/form-validation
-
 
 	.uit-textbox {
 		@include uit-typography($typography, label);
 
 		display: flex;
 		flex-direction: column;
-		margin: $default-element-thickness;
+		margin: $default-thickness;
 
 		.multiline {
 			min-height: 120px;
@@ -21,48 +23,46 @@
 			flex: 1;
 			
 			.uit-button {
-				margin: 0px 4px !important;
+				margin: 0px $default-thickness !important;
 			}
 
 			.input {
 				@include uit-typography($typography, input);
 				flex: 1;
-				padding: $default-element-thickness / 2;
 				background: transparent;
-				flex: 1;
 				outline: none;
 				border: none;
-
-				background-color: white;
+				padding: $default-thickness;
+				background-color: map-get($background, input);
 
 				&:hover {
 					transition: $default-transition;
-					// background-color: map-get($uit-theme-background, interaction-hover-background);
-					// color: map-get($uit-theme-foreground, interaction-hover-foreground);
+					// background-color: map-get($background, input-hover);
+					// color: map-get($foreground, input-hover);
 				}
 		
 				&:active {
 					transition: $default-transition;
-					// background-color: map-get($uit-theme-background, interaction-pressed-background);
-					// color: map-get($uit-theme-foreground, interaction-pressed-foreground);
+					// background-color: map-get($background, input-pressed);
+					// color: map-get($foreground, input-pressed);
 				}	
 		
 				// &:focus {
-				// 	border: 2px solid map-get($uit-theme-background, focus);
+				// 	border: 2px solid map-get($background, focus);
 				// }
 		
 				// &:disabled {
 				// 	pointer-events: none;
 				// 	border-color: 2px solid blue !important;
-				// 	// background-color: map-get($uit-theme-background, interaction-disabled-background);
-				// 	// color: map-get($uit-theme-foreground, interaction-disabled-foreground);
+				// 	// background-color: map-get($background, input-disabled);
+				// 	// color: map-get($foreground, input-disabled);
 				// }
 
 				&[disabled] {
 					pointer-events: none;
-					border-color: 2px solid blue !important;
-					// background-color: map-get($uit-theme-background, interaction-disabled-background);
-					// color: map-get($uit-theme-foreground, interaction-disabled-foreground);
+					border-color: 2px solid gray !important; // ToDO: theme resource
+					// background-color: map-get($background, input-disabled);
+					// color: map-get($foreground, input-disabled);
 				}
 		
 				// &:valid {
@@ -74,7 +74,7 @@
 				// }
 		
 				&:read-only {
-					border: 1px solid gray;
+					border: 1px solid gray; // ToDO: resource
 				}
 		
 				// &:required {

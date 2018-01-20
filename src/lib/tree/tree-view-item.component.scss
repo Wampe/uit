@@ -1,31 +1,36 @@
-@mixin uit-tree-view-item {
+@mixin uit-tree-view-item($theme) {
+	$typography: map-get($theme, typography);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
+
 	.uit-tree-view-item {
+		@include uit-typography($typography, item); 
+
+		flex: 1;
 		display: flex;
 		flex-direction: column;
-		
-		margin: 4px;
-		flex: 1;
-		background-color: map-get($uit-theme-background, navigation-background);
-		color: map-get($uit-theme-foreground, navigation-foreground);
+		margin: $default-thickness;
+		background-color: map-get($background, item);
+		color: map-get($foreground, item);
 
 		.tree-view-item-header {
-			padding: 8px;
+			padding: $default-thickness;
 
 			&:hover {
 				transition: $default-transition;
-				background-color: map-get($uit-theme-background, navigation-hover-background);
-				color: map-get($uit-theme-foreground, navigation-hover-foreground);
+				background-color: map-get($background, navigation-hover);
+				color: map-get($foreground, navigation-hover);
 			}
 		}
 
 		.items-presenter {
-			margin-left: 16px;
+			margin-left: $default-thickness;
 		}
 
-		// &.active {
-		// 	transition: $default-transition;
-		// 	background-color: map-get($uit-theme-background, navigation-pressed-background);
-		// 	color: map-get($uit-theme-foreground, navigation-pressed-foreground);
-		// }	
+		&.active {
+			transition: $default-transition;
+			background-color: map-get($background, item-pressed);
+			color: map-get($foreground, item-pressed);
+		}	
 	}
 }

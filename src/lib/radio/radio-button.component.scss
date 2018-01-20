@@ -1,18 +1,24 @@
-@mixin uit-radio-button($typography) {
+@mixin uit-radio-button($theme) {
+	$typography: map-get($theme, typography);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
+	
 	.uit-radio-button {
+		@include uit-typography($typography, input); 
+
 		display: inline-flex;
-		margin: 4px;
 		align-items: center;
+		margin: $default-thickness; 
 
 		.bullet {
 			user-select: none;
-			margin: 4px;
-			border: 2px solid gray;
-			border-radius: 12px;
-			width: 24px;
-			height: 24px;
+			margin: $default-thickness;
+			border: 2px solid gray; // ToDo: theme resouce
+			border-radius: $bullet-width/2;
+			width: $bullet-width;
+			height: $bullet-height;
 			display: flex;
-    	justify-content: center;
+    		justify-content: center;
 
 			.decorator {
 				align-items: center;
@@ -23,7 +29,7 @@
 		.content {
 			display: flex;
 			align-items: center;
-			margin: 4px;
+			margin: $default-thickness; 
 		}
 	}
 }

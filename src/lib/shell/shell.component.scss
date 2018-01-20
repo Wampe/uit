@@ -1,14 +1,14 @@
 @mixin uit-shell() {
 	.uit-shell {
-		display: flex;
-		flex-direction: column;
 		flex: 1;
 		height: 100%;
+		display: flex;
+		flex-direction: column;
 		align-items: stretch;
 
 		.shell-body {
-			display: flex;
 			flex: 1;
+			display: flex;
 			overflow: hidden;
 	
 			.content {

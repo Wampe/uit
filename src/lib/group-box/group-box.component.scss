@@ -1,22 +1,29 @@
-@mixin uit-group-box() {
+@mixin uit-group-box($theme) {
+	$typography: map-get($theme, typography);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
+
 	.uit-group-box {
+		// @include uit-typography($typography, body); // ToDo: need it?
+		
 		display: flex;
 		flex-direction: column;
-		background-color: gray;
-		margin: 8px;
+		background-color: map-get($background, content); 
+		margin: $default-thickness;
 
 		.group-box-header {
+			@include uit-typography($typography, label);
+
 			display: table;
-			background-color: black;
-			color: white;
-			margin-left: 16px;
-			padding: 4px 8px;
-			font-size: 12px;
+			background-color: map-get($background, content-header); 
+			color: map-get($foreground, content-header); 
+			margin-left: $default-thickness*2;
+			padding: $default-thickness/2 $default-thickness;
 		}
 
 		.group-box-content {
 			flex: 1;
-			padding: 8px 24px;
+			padding: $default-thickness $default-thickness*3;
 		}
 	}
 }

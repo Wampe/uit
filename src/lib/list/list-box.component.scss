@@ -1,12 +1,16 @@
-@mixin uit-list-box() {
+@mixin uit-list-box($theme) {
+	// $typography: map-get($theme, typography);
+	// $background: map-get($theme, background);
+	// $foreground: map-get($theme, foreground);
+
 	.uit-list-box {
 		overflow: hidden;
 		display: flex;
 		flex: 1;
 		flex-direction: column;
-		margin: 8px;
-		background-color: gray;
-		border: 1px solid black;
+		margin: $default-thickness;
+		background-color: gray; // ToDo: theme resouce ???
+		border: 1px solid black; // ToDo: theme resouce ???
 
 		.list-body {
 			flex: 1;

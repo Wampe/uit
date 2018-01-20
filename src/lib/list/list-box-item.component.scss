@@ -1,20 +1,26 @@
-@mixin uit-list-box-item {
+@mixin uit-list-box-item($theme) {
+	$typography: map-get($theme, typography);
+	$background: map-get($theme, background);
+	$foreground: map-get($theme, foreground);
+
 	.uit-list-box-item {
-		margin: 4px;
-		padding: 8px;
-		background-color: map-get($uit-theme-background, navigation-background);
-		color: map-get($uit-theme-foreground, navigation-foreground);
+		@include uit-typography($typography, item); 
+
+		margin: $default-thickness;
+		padding: $default-thickness;
+		background-color: map-get($background, item);
+		color: map-get($foreground, item);
 
 		&:hover {
 			transition: $default-transition;
-			background-color: map-get($uit-theme-background, navigation-hover-background);
-			color: map-get($uit-theme-foreground, navigation-hover-foreground);
+			background-color: map-get($background, item-hover);
+			color: map-get($foreground, item-hover);
 		}
 
 		&.active {
 			transition: $default-transition;
-			background-color: map-get($uit-theme-background, navigation-pressed-background);
-			color: map-get($uit-theme-foreground, navigation-pressed-foreground);
+			background-color: map-get($background, navigation-pressed);
+			color: map-get($foreground, navigation-pressed);
 		}	
 	}
 }
