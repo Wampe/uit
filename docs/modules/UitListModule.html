@@ -1,0 +1,919 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>UIT: User Interface Toolkit</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">UIT: User Interface Toolkit</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">UIT: User Interface Toolkit</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                        <a href="../license.html"
+                                    >
+                                        <span class="fa fa-file-text-o"></span>LICENSE
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/UitButtonModule.html" >UitButtonModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitCheckboxModule.html" >UitCheckboxModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitGroupBoxModule.html" >UitGroupBoxModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitListModule.html"  data-type="entity-link" class="active" >UitListModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitModule.html" >UitModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitNavigationModule.html" >UitNavigationModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitRadioModule.html" >UitRadioModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitShellModule.html" >UitShellModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitTextboxModule.html" >UitTextboxModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitToggleButtonModule.html" >UitToggleButtonModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UitTreeModule.html" >UitTreeModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/UitButton.html" >UitButton</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitCheckbox.html" >UitCheckbox</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitGroupBox.html" >UitGroupBox</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitListBox.html" >UitListBox</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitListBoxItem.html" >UitListBoxItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitNavigation.html" >UitNavigation</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitNavigationItem.html" >UitNavigationItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitRadioButton.html" >UitRadioButton</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitRadioGroup.html" >UitRadioGroup</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitShell.html" >UitShell</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitSiteFooter.html" >UitSiteFooter</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitSiteHeader.html" >UitSiteHeader</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitTextbox.html" >UitTextbox</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitToggleButton.html" >UitToggleButton</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitTreeView.html" >UitTreeView</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitTreeViewItem.html" >UitTreeViewItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UitVirtualScroll.html" >UitVirtualScroll</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-directives-links"
+                            >
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/UitItemTemplateDirective.html" >UitItemTemplateDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/UitScrollBarDirective.html" >UitScrollBarDirective</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/UitButtonElement.html" >UitButtonElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/UitElement.html" >UitElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/UitFormElement.html" >UitFormElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/UitItemElement.html" >UitItemElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/UitItemsElement.html" >UitItemsElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/UitToggleValueElement.html" >UitToggleValueElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/UitValidationElement.html" >UitValidationElement</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/UitValueElement.html" >UitValueElement</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/ChangeEvent.html" >ChangeEvent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/INavigation.html" >INavigation</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/IScrollBarOptions.html" >IScrollBarOptions</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/ISelectable.html" >ISelectable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/IValidationResult.html" >IValidationResult</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">UIT: User Interface Toolkit</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                               <a href="../license.html"
+                                           >
+                                               <span class="fa fa-file-text-o"></span>LICENSE
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/UitButtonModule.html" >UitButtonModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitCheckboxModule.html" >UitCheckboxModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitGroupBoxModule.html" >UitGroupBoxModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitListModule.html"  data-type="entity-link" class="active" >UitListModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitModule.html" >UitModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitNavigationModule.html" >UitNavigationModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitRadioModule.html" >UitRadioModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitShellModule.html" >UitShellModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitTextboxModule.html" >UitTextboxModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitToggleButtonModule.html" >UitToggleButtonModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UitTreeModule.html" >UitTreeModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/UitButton.html" >UitButton</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitCheckbox.html" >UitCheckbox</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitGroupBox.html" >UitGroupBox</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitListBox.html" >UitListBox</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitListBoxItem.html" >UitListBoxItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitNavigation.html" >UitNavigation</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitNavigationItem.html" >UitNavigationItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitRadioButton.html" >UitRadioButton</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitRadioGroup.html" >UitRadioGroup</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitShell.html" >UitShell</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitSiteFooter.html" >UitSiteFooter</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitSiteHeader.html" >UitSiteHeader</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitTextbox.html" >UitTextbox</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitToggleButton.html" >UitToggleButton</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitTreeView.html" >UitTreeView</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitTreeViewItem.html" >UitTreeViewItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UitVirtualScroll.html" >UitVirtualScroll</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#directives-links"
+                   >
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/UitItemTemplateDirective.html" >UitItemTemplateDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/UitScrollBarDirective.html" >UitScrollBarDirective</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/UitButtonElement.html" >UitButtonElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/UitElement.html" >UitElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/UitFormElement.html" >UitFormElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/UitItemElement.html" >UitItemElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/UitItemsElement.html" >UitItemsElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/UitToggleValueElement.html" >UitToggleValueElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/UitValidationElement.html" >UitValidationElement</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/UitValueElement.html" >UitValueElement</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/ChangeEvent.html" >ChangeEvent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/INavigation.html" >INavigation</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/IScrollBarOptions.html" >IScrollBarOptions</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/ISelectable.html" >ISelectable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/IValidationResult.html" >IValidationResult</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content module">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+  <li>Modules</li>
+  <li>UitListModule</li>
+</ol>
+
+      <div class="text-center module-graph-container">
+          <div id="module-graph-svg">
+              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: dependencies Pages: 1 -->
+<svg width="724pt" height="396pt"
+ viewBox="0.00 0.00 724.00 395.59" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 391.5901)">
+<title>dependencies</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-391.5901 720,-391.5901 720,4 -4,4"/>
+<text text-anchor="start" x="337.0091" y="-42.4" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#000000">Legend</text>
+<polygon fill="#ffffb3" stroke="transparent" points="124,-10 124,-30 144,-30 144,-10 124,-10"/>
+<text text-anchor="start" x="147.629" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Declarations</text>
+<polygon fill="#8dd3c7" stroke="transparent" points="237,-10 237,-30 257,-30 257,-10 237,-10"/>
+<text text-anchor="start" x="260.7251" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Module</text>
+<polygon fill="#80b1d3" stroke="transparent" points="323,-10 323,-30 343,-30 343,-10 323,-10"/>
+<text text-anchor="start" x="346.7812" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Bootstrap</text>
+<polygon fill="#fdb462" stroke="transparent" points="420,-10 420,-30 440,-30 440,-10 420,-10"/>
+<text text-anchor="start" x="443.6732" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Providers</text>
+<polygon fill="#fb8072" stroke="transparent" points="516,-10 516,-30 536,-30 536,-10 516,-10"/>
+<text text-anchor="start" x="539.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
+<g id="clust1" class="cluster">
+<title>cluster_UitListModule</title>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="8,-70 8,-379.5901 708,-379.5901 708,-70 8,-70"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_UitListModule_declarations</title>
+<polygon fill="none" stroke="#000000" points="16,-189.5901 16,-241.5901 700,-241.5901 700,-189.5901 16,-189.5901"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_UitListModule_UitListBoxItem_providers</title>
+<polygon fill="none" stroke="#000000" points="75,-78 75,-176.5901 273,-176.5901 273,-78 75,-78"/>
+</g>
+<g id="clust9" class="cluster">
+<title>cluster_UitListModule_exports</title>
+<polygon fill="none" stroke="#000000" points="165,-319.5901 165,-371.5901 575,-371.5901 575,-319.5901 165,-319.5901"/>
+</g>
+<!-- UitScrollBarDirective -->
+<g id="node1" class="node">
+<title>UitScrollBarDirective</title>
+<polygon fill="#ffffb3" stroke="#000000" points="691.6219,-233.5901 552.3781,-233.5901 552.3781,-197.5901 691.6219,-197.5901 691.6219,-233.5901"/>
+<text text-anchor="middle" x="622" y="-211.3901" font-family="Times,serif" font-size="14.00" fill="#000000">UitScrollBarDirective</text>
+</g>
+<!-- UitListModule -->
+<g id="node6" class="node">
+<title>UitListModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="376.7162,-298.5901 373.7162,-302.5901 352.7162,-302.5901 349.7162,-298.5901 277.2838,-298.5901 277.2838,-262.5901 376.7162,-262.5901 376.7162,-298.5901"/>
+<text text-anchor="middle" x="327" y="-276.3901" font-family="Times,serif" font-size="14.00" fill="#000000">UitListModule</text>
+</g>
+<!-- UitScrollBarDirective&#45;&gt;UitListModule -->
+<g id="edge1" class="edge">
+<title>UitScrollBarDirective&#45;&gt;UitListModule</title>
+<path fill="none" stroke="#000000" d="M559.5935,-233.6962C559.5935,-252.9292 559.5935,-280.5901 559.5935,-280.5901 559.5935,-280.5901 386.6118,-280.5901 386.6118,-280.5901"/>
+<polygon fill="#000000" stroke="#000000" points="386.6119,-277.0902 376.6118,-280.5901 386.6118,-284.0902 386.6119,-277.0902"/>
+</g>
+<!-- UitVirtualScroll -->
+<g id="node2" class="node">
+<title>UitVirtualScroll</title>
+<polygon fill="#ffffb3" stroke="#000000" points="534.4804,-233.5901 427.5196,-233.5901 427.5196,-197.5901 534.4804,-197.5901 534.4804,-233.5901"/>
+<text text-anchor="middle" x="481" y="-211.3901" font-family="Times,serif" font-size="14.00" fill="#000000">UitVirtualScroll</text>
+</g>
+<!-- UitVirtualScroll&#45;&gt;UitListModule -->
+<g id="edge2" class="edge">
+<title>UitVirtualScroll&#45;&gt;UitListModule</title>
+<path fill="none" stroke="#000000" d="M481,-233.6171C481,-249.9877 481,-271.5901 481,-271.5901 481,-271.5901 386.9994,-271.5901 386.9994,-271.5901"/>
+<polygon fill="#000000" stroke="#000000" points="386.9994,-268.0902 376.9994,-271.5901 386.9994,-275.0902 386.9994,-268.0902"/>
+</g>
+<!-- UitItemTemplateDirective -->
+<g id="node3" class="node">
+<title>UitItemTemplateDirective</title>
+<polygon fill="#ffffb3" stroke="#000000" points="409.4959,-233.5901 244.5041,-233.5901 244.5041,-197.5901 409.4959,-197.5901 409.4959,-233.5901"/>
+<text text-anchor="middle" x="327" y="-211.3901" font-family="Times,serif" font-size="14.00" fill="#000000">UitItemTemplateDirective</text>
+</g>
+<!-- UitItemTemplateDirective&#45;&gt;UitListModule -->
+<g id="edge3" class="edge">
+<title>UitItemTemplateDirective&#45;&gt;UitListModule</title>
+<path fill="none" stroke="#000000" d="M327,-233.6962C327,-233.6962 327,-252.581 327,-252.581"/>
+<polygon fill="#000000" stroke="#000000" points="323.5001,-252.581 327,-262.581 330.5001,-252.5811 323.5001,-252.581"/>
+</g>
+<!-- UitListBoxItem -->
+<g id="node4" class="node">
+<title>UitListBoxItem</title>
+<polygon fill="#ffffb3" stroke="#000000" points="226.1598,-233.5901 121.8402,-233.5901 121.8402,-197.5901 226.1598,-197.5901 226.1598,-233.5901"/>
+<text text-anchor="middle" x="174" y="-211.3901" font-family="Times,serif" font-size="14.00" fill="#000000">UitListBoxItem</text>
+</g>
+<!-- UitListBoxItem&#45;&gt;UitListModule -->
+<g id="edge4" class="edge">
+<title>UitListBoxItem&#45;&gt;UitListModule</title>
+<path fill="none" stroke="#000000" d="M199.5391,-233.6171C199.5391,-249.9877 199.5391,-271.5901 199.5391,-271.5901 199.5391,-271.5901 267.3553,-271.5901 267.3553,-271.5901"/>
+<polygon fill="#000000" stroke="#000000" points="267.3553,-275.0902 277.3553,-271.5901 267.3553,-268.0902 267.3553,-275.0902"/>
+</g>
+<!-- UitListBox -->
+<g id="node5" class="node">
+<title>UitListBox</title>
+<polygon fill="#ffffb3" stroke="#000000" points="103.5028,-233.5901 24.4972,-233.5901 24.4972,-197.5901 103.5028,-197.5901 103.5028,-233.5901"/>
+<text text-anchor="middle" x="64" y="-211.3901" font-family="Times,serif" font-size="14.00" fill="#000000">UitListBox</text>
+</g>
+<!-- UitListBox&#45;&gt;UitListModule -->
+<g id="edge7" class="edge">
+<title>UitListBox&#45;&gt;UitListModule</title>
+<path fill="none" stroke="#000000" d="M64,-233.6962C64,-252.9292 64,-280.5901 64,-280.5901 64,-280.5901 267.2225,-280.5901 267.2225,-280.5901"/>
+<polygon fill="#000000" stroke="#000000" points="267.2226,-284.0902 277.2225,-280.5901 267.2225,-277.0902 267.2226,-284.0902"/>
+</g>
+<!-- UitItemTemplateDirective  -->
+<g id="node8" class="node">
+<title>UitItemTemplateDirective </title>
+<polygon fill="#fb8072" stroke="#000000" points="566.9952,-363.5901 399.0048,-363.5901 399.0048,-327.5901 566.9952,-327.5901 566.9952,-363.5901"/>
+<text text-anchor="middle" x="483" y="-341.3901" font-family="Times,serif" font-size="14.00" fill="#000000">UitItemTemplateDirective </text>
+</g>
+<!-- UitListModule&#45;&gt;UitItemTemplateDirective  -->
+<g id="edge9" class="edge">
+<title>UitListModule&#45;&gt;UitItemTemplateDirective </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M376.7165,-289.5901C391.64,-289.5901 404.125,-289.5901 404.125,-289.5901 404.125,-289.5901 404.125,-317.5631 404.125,-317.5631"/>
+<polygon fill="#000000" stroke="#000000" points="400.6251,-317.563 404.125,-327.5631 407.6251,-317.5631 400.6251,-317.563"/>
+</g>
+<!-- UitListBoxItem  -->
+<g id="node9" class="node">
+<title>UitListBoxItem </title>
+<polygon fill="#fb8072" stroke="#000000" points="381.1593,-363.5901 272.8407,-363.5901 272.8407,-327.5901 381.1593,-327.5901 381.1593,-363.5901"/>
+<text text-anchor="middle" x="327" y="-341.3901" font-family="Times,serif" font-size="14.00" fill="#000000">UitListBoxItem </text>
+</g>
+<!-- UitListModule&#45;&gt;UitListBoxItem  -->
+<g id="edge10" class="edge">
+<title>UitListModule&#45;&gt;UitListBoxItem </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M327,-298.6962C327,-298.6962 327,-317.581 327,-317.581"/>
+<polygon fill="#000000" stroke="#000000" points="323.5001,-317.581 327,-327.581 330.5001,-317.5811 323.5001,-317.581"/>
+</g>
+<!-- UitListBox  -->
+<g id="node10" class="node">
+<title>UitListBox </title>
+<polygon fill="#fb8072" stroke="#000000" points="255.0043,-363.5901 172.9957,-363.5901 172.9957,-327.5901 255.0043,-327.5901 255.0043,-363.5901"/>
+<text text-anchor="middle" x="214" y="-341.3901" font-family="Times,serif" font-size="14.00" fill="#000000">UitListBox </text>
+</g>
+<!-- UitListModule&#45;&gt;UitListBox  -->
+<g id="edge11" class="edge">
+<title>UitListModule&#45;&gt;UitListBox </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M277.3654,-289.5901C262.4664,-289.5901 250.0019,-289.5901 250.0019,-289.5901 250.0019,-289.5901 250.0019,-317.5631 250.0019,-317.5631"/>
+<polygon fill="#000000" stroke="#000000" points="246.502,-317.563 250.0019,-327.5631 253.502,-317.5631 246.502,-317.563"/>
+</g>
+<!-- {
+ &#160;&#160;&#160;: , : (() =&gt; ), : true
+} -->
+<g id="node7" class="node">
+<title>{
+ &#160;&#160;&#160;: , : (() =&gt; ), : true
+}</title>
+<ellipse fill="#fdb462" stroke="#000000" cx="174" cy="-127.295" rx="91.4557" ry="41.0911"/>
+<text text-anchor="middle" x="174" y="-139.895" font-family="Times,serif" font-size="14.00" fill="#000000">{</text>
+<text text-anchor="middle" x="174" y="-123.095" font-family="Times,serif" font-size="14.00" fill="#000000"> &#160;&#160;&#160;: , : (() =&gt; ), : true</text>
+<text text-anchor="middle" x="174" y="-106.295" font-family="Times,serif" font-size="14.00" fill="#000000">}</text>
+</g>
+<!-- {
+ &#160;&#160;&#160;: , : (() =&gt; ), : true
+}&#45;&gt;UitListBoxItem -->
+<g id="edge5" class="edge">
+<title>{
+ &#160;&#160;&#160;: , : (() =&gt; ), : true
+}&#45;&gt;UitListBoxItem</title>
+<path fill="none" stroke="#000000" d="M156.5568,-168.0826C156.5568,-168.0826 156.5568,-187.4641 156.5568,-187.4641"/>
+<polygon fill="#000000" stroke="#000000" points="153.0569,-187.4641 156.5568,-197.4641 160.0569,-187.4642 153.0569,-187.4641"/>
+</g>
+<!-- {
+ &#160;&#160;&#160;: , : (() =&gt; ), : true
+}&#45;&gt;UitListBoxItem -->
+<g id="edge6" class="edge">
+<title>{
+ &#160;&#160;&#160;: , : (() =&gt; ), : true
+}&#45;&gt;UitListBoxItem</title>
+<path fill="none" stroke="#000000" d="M191.4432,-168.0826C191.4432,-168.0826 191.4432,-187.4641 191.4432,-187.4641"/>
+<polygon fill="#000000" stroke="#000000" points="187.9433,-187.4641 191.4432,-197.4641 194.9433,-187.4642 187.9433,-187.4641"/>
+</g>
+<!-- {
+ &#160;&#160;&#160;: , : (() =&gt; ), : true
+}&#45;&gt;UitListBox -->
+<g id="edge8" class="edge">
+<title>{
+ &#160;&#160;&#160;: , : (() =&gt; ), : true
+}&#45;&gt;UitListBox</title>
+<path fill="none" stroke="#000000" d="M93.0118,-146.8906C93.0118,-146.8906 93.0118,-187.5525 93.0118,-187.5525"/>
+<polygon fill="#000000" stroke="#000000" points="89.5119,-187.5525 93.0118,-197.5525 96.5119,-187.5526 89.5119,-187.5525"/>
+</g>
+</g>
+</svg>
+
+          </div>
+          <i id="fullscreen" class="fa fa-expand module-graph-fullscreen-btn" aria-hidden="true"></i>
+          <div class="btn-group">
+              <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
+              <button id="reset" class="btn btn-default btn-sm">Reset</button>
+              <button id="zoom-out" class="btn btn-default btn-sm">Zoom out</button>
+          </div>
+      </div>
+      <script src="../js/libs/svg-pan-zoom.min.js"></script>
+      <script src="../js/svg-pan-zoom.controls.js"></script>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/lib/list/list.module.ts</code>
+        </p>
+
+
+        <div class="container-fluid module">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank" title="Official documentation about module declarations"><span class="fa fa-info-circle"></span></a></h3>
+                    <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="../directives/UitScrollBarDirective.html">UitScrollBarDirective</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../components/UitVirtualScroll.html">UitVirtualScroll</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../directives/UitItemTemplateDirective.html">UitItemTemplateDirective</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../components/UitListBoxItem.html">UitListBoxItem</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../components/UitListBox.html">UitListBox</a>
+                            </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span class="fa fa-info-circle"></a></h3>
+                    <ul class="list-group">
+                            <li class="list-group-item">
+                                    <a href="../directives/UitItemTemplateDirective.html" >UitItemTemplateDirective</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../components/UitListBoxItem.html" >UitListBoxItem</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../components/UitListBox.html" >UitListBox</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tab-pane fade tab-source-code" id="c-source">
+        <pre class="line-numbers"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { FormsModule } from &#x27;@angular/forms&#x27;;
+
+import { UitScrollBarDirective } from &#x27;../core/scrolling/scrollbar.directive&#x27;;
+import { UitVirtualScroll } from &#x27;../core/scrolling/virtual-scroll.component&#x27;;
+import { UitItemTemplateDirective } from &#x27;./item-template.directive&#x27;;
+import { UitListBoxItem } from &#x27;./list-box-item.component&#x27;;
+import { UitListBox } from &#x27;./list-box.component&#x27;;
+
+export * from &#x27;./list-box.component&#x27;;
+export * from &#x27;./list-box-item.component&#x27;;
+export * from &#x27;./item-template.directive&#x27;;
+
+@NgModule({
+	imports: [
+		CommonModule,
+		FormsModule
+	],
+	declarations: [
+		UitScrollBarDirective,
+		UitVirtualScroll,
+		UitItemTemplateDirective,
+		UitListBoxItem,
+		UitListBox
+	],
+	exports: [
+		UitItemTemplateDirective,
+		UitListBoxItem,
+		UitListBox
+	]
+})
+export class UitListModule { }
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>
