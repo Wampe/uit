@@ -8,19 +8,19 @@
 
 		margin: $default-thickness;
 		padding: $default-thickness;
-		background-color: map-get($background, item);
+		background: map-get($background, item);
 		color: map-get($foreground, item);
 
 		&:hover {
 			transition: $default-transition;
-			background-color: map-get($background, item-hover);
+			background: map-get($background, item-hover);
 			color: map-get($foreground, item-hover);
 		}
 
 		&.active {
 			transition: $default-transition;
-			background-color: map-get($background, navigation-pressed);
-			color: map-get($foreground, navigation-pressed);
+			background: map-get($background, item-pressed);
+			color: map-get($foreground, item-pressed);
 		}	
 	}
 }

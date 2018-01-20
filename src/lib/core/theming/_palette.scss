@@ -9,25 +9,28 @@ $uit-theme-background: (
 	content: #666,
 	content-header: #222,
 
-	navigation-item: #aaa,
-	navigation-item-hover: #ccc,
-	navigation-item-pressed: #888,
-	navigation-item-disabled: gray,
+	navigation-item: linear-gradient(#e5e5e5, #b2b2b2),
+	navigation-item-hover: linear-gradient(#ffffff, #cccccc),
+	navigation-item-pressed: linear-gradient(#999999, #b2b2b2),
+	navigation-item-selected: linear-gradient(#999999, #b2b2b2),
+	navigation-item-disabled: linear-gradient(#666666, #4d4d4d),
 
-	interaction: #444,
-	interaction-hover: #666,
-	interaction-pressed: #222,
-	interaction-disabled: gray,
+	interaction: linear-gradient(#2e2ee5, #2424b2),
+	interaction-hover: linear-gradient(#3333ff, #2e2ee5),
+	interaction-pressed: linear-gradient(#1f1f99,#2424b2),
+	interaction-selected: linear-gradient(#1f1f99,#2424b2),
+	interaction-disabled: linear-gradient(#666666, #4d4d4d),
 
 	input: #444,
 	input-hover: #666,
 	input-pressed: #222,
 	input-disabled: gray,
 
-	item: #444,
-	item-hover: #666,
-	item-pressed: #222,
-	item-disabled: gray,
+	item: linear-gradient(#e5e5e5, #b2b2b2),
+	item-hover: linear-gradient(#ffffff, #cccccc),
+	item-pressed: linear-gradient(#999999, #b2b2b2),
+	item-selected: linear-gradient(#999999, #b2b2b2),
+	item-disabled: linear-gradient(#666666, #4d4d4d),
 );
 
 $uit-theme-foreground: (
@@ -44,11 +47,13 @@ $uit-theme-foreground: (
 	navigation-item: #222,
 	navigation-item-hover: #222,
 	navigation-item-pressed: #222,
+	navigation-item-selected: #222,
 	navigation-item-disabled: darkgray,
 
 	interaction: white,
 	interaction-hover: white,
 	interaction-pressed: white,
+	interaction-selected: white,
 	interaction-disabled: darkgray,
 
 	input: white,
@@ -56,8 +61,9 @@ $uit-theme-foreground: (
 	input-pressed: white,
 	input-disabled: darkgray,
 
-	item: white,
-	item-hover: white,
-	item-pressed: white,
-	item-disabled: white,
+	item: #222222,
+	item-hover: #222222,
+	item-pressed: #222222,
+	item-selected: #222222,
+	item-disabled: #222222,
 );

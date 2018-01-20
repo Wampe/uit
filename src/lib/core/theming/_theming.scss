@@ -8,7 +8,7 @@ $bullet-height: 24px;
 @import 'element';
 @import 'site';
 
-@function createTheme(
+@function uit-create-theme(
 	$typography: uit-typography-config(),
 	$background: $uit-theme-background,
 	$foreground: $uit-theme-foreground
@@ -37,7 +37,7 @@ $bullet-height: 24px;
 @import '../../tree/tree-view.component';
 @import '../../tree/tree-view-item.component';
 
-@mixin uit-theme($theme: createTheme()) {
+@mixin uit-theme($theme: uit-create-theme()) {
 	@include uit-element();
 	@include uit-site($theme);
 	@include uit-shell();

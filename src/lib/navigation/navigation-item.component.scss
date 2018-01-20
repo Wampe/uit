@@ -12,21 +12,21 @@
 		.link {
 			cursor: default;
 			user-select: none;
-			text-decoration: unset;
+			text-decoration: none;
 			padding: $default-thickness;
 			transition: $default-transition;
-			background-color: map-get($background, navigation-item);
+			background: map-get($background, navigation-item);
 			color: map-get($foreground, navigation-item);
 			
 			&:hover {
 				transition: $default-transition;
-				background-color: map-get($background, navigation-item-hover);
+				background: map-get($background, navigation-item-hover);
 				color: map-get($foreground, navigation-item-hover);
 			}
 
 			&.active {
 				transition: $default-transition;
-				background-color: map-get($background, navigation-item-pressed);
+				background: map-get($background, navigation-item-pressed);
 				color: map-get($foreground, navigation-item-pressed);
 			}	
 
@@ -36,7 +36,7 @@
 
 			&[disabled] {
 				pointer-events: none;
-				background-color: map-get($background, navigation-item-disabled);
+				background: map-get($background, navigation-item-disabled);
 				color: map-get($foreground, navigation-item-disabled);
 			}
 		}
