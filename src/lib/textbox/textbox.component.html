@@ -5,16 +5,16 @@
 <div class="input-wrapper">
 	<ng-container *ngIf="!isMultiline">
 		<input 	class="input"
-						[maxlength]="100"
-						[type]="type"
-						[min]="min"
-						[max]="max"
-						[step]="step" 
-						[readonly]="readonly"
-						[required]="required"
-						[disabled]="disabled"
-						[(ngModel)]="value"
-						(blur)="blur($event)">
+				[maxlength]="100"
+				[type]="type"
+				[min]="min"
+				[max]="max"
+				[step]="step" 
+				[readonly]="readonly"
+				[required]="required"
+				[disabled]="disabled"
+				[(ngModel)]="value"
+				(blur)="blur($event)">
 						<!-- https://angular.io/guide/form-validation -->
 		<div *ngIf="(invalid | async) && (model.dirty || model.touched)">
 			<div *ngFor="let message of failures | async">{{message}}</div>
@@ -25,11 +25,12 @@
 		</ng-container>
 	</ng-container>
 	<ng-container *ngIf="isMultiline">
-			<textarea class="input multiline"
-								[readonly]="readonly"
-								[required]="required"
-								[disabled]="disabled"
-								[(ngModel)]="value"
-								(blur)="blur($event)"></textarea>
+			<textarea 	class="input multiline"
+						[readonly]="readonly"
+						[required]="required"
+						[disabled]="disabled"
+						[(ngModel)]="value"
+						(blur)="blur($event)">
+			</textarea>
 		</ng-container>
 </div>

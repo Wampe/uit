@@ -3,8 +3,8 @@
 </ng-template>
 
 <a 	class="link"
-		[class.active]="isSelected"
-		[routerLink]="[path]">
+	[class.active]="isSelected"
+	[routerLink]="[path]">
 	<ng-container *ngIf="!label else defaultTemplate">
 		<ng-content></ng-content>
 	</ng-container>

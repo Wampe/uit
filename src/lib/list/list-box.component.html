@@ -5,7 +5,7 @@
 <ng-template #dynamic>
 	<uit-virtual-scroll #scroll [items]="items" uitScrollBar>
 		<uit-list-box-item *ngFor="let item of scroll.viewPortItems" 
-												[ngModel]="item">
+							[ngModel]="item">
 			<ng-container *ngTemplateOutlet="itemTemplate ? itemTemplate : defaultItemTemplate; context: {$implicit: item}"></ng-container>
 		</uit-list-box-item>
 	</uit-virtual-scroll>
